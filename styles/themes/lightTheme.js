@@ -3,21 +3,21 @@ import { createTheme } from "@mui/material/styles";
 let lightTheme = createTheme({
     palette: {
         primary: {
-            main: "#ffffff",
+            main: "#FFBA49",
         },
         secondary: {
-            main: "#000000",
+            main: "#1B998B",
         },
         mode: "light",
         background: {
-            default: "#ffffff",
+            default: "#272D2D",
             accentLight: "#ffeccd",
             accentDark: "#ffeccd",
         },
         custom: {
-            dark: "#000000",
+            dark: "#272D2D",
             darkMuted: "#757575",
-            light: "#ffffff",
+            light: "#F6F8FF",
             lightMuted: "#cacaca",
         },
     },
@@ -34,7 +34,7 @@ lightTheme = createTheme(lightTheme, {
     typography: {
         h1: {
             fontFamily: "Raleway",
-            // color: darkTheme.palette.custom.dark,
+            color: lightTheme.palette.custom.light,
             fontWeight: "400",
             lineHeight: ".85em",
             fontSize: "clamp(3.5rem, 5vw, 7rem)",

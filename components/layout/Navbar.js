@@ -20,7 +20,7 @@ const activeStyle = {
 };
 
 const inactiveStyle = {
-    color: lightTheme.palette.custom.lightMuted,
+    color: lightTheme.palette.custom.light,
 };
 
 const Navbar = () => {
@@ -45,7 +45,7 @@ const Navbar = () => {
             sx={{
                 position: "fixed",
                 top: "0",
-                zIndex: "10",
+                zIndex: "100",
                 display: { xs: "inherit", lg: "flex" },
             }}
         >
@@ -130,7 +130,7 @@ const Navbar = () => {
                                 fontSize: "1.75rem",
                                 flexGrow: 1,
                                 fontWeight: 700,
-                                color: lightTheme.palette.custom.darkMuted,
+                                color: lightTheme.palette.custom.dark,
                             }}
                         >
                             <Link href="/" style={{ color: "inherit" }}>
@@ -161,14 +161,7 @@ const Navbar = () => {
                                             },
                                         }}
                                     >
-                                        <Link
-                                            href={page.href}
-                                            style={({ isActive }) =>
-                                                isActive
-                                                    ? activeStyle
-                                                    : inactiveStyle
-                                            }
-                                        >
+                                        <Link href={page.href}>
                                             {page.name}
                                         </Link>
                                     </Typography>
