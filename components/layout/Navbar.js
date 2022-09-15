@@ -14,6 +14,7 @@ import { useState } from "react";
 import { navigateToTop } from "../../utility/navigateToTop";
 import { pages, siteName, navbar } from "../../siteInfo";
 import SocialMediaIcons from "../general/SocialMediaIcons";
+import { useRouter } from "next/router";
 
 const activeStyle = {
     color: lightTheme.palette.custom.light,
@@ -25,6 +26,8 @@ const inactiveStyle = {
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
+    const router = useRouter();
+    const currentPage = router.pathname.split("/")[1];
     const trigger = useScrollTrigger({
         disableHysteresis: true,
         threshold: 0,
@@ -147,17 +150,23 @@ const Navbar = () => {
                             <Box sx={{ display: "flex", alignItems: "center" }}>
                                 {pages.map((page, index) => (
                                     <Typography
-                                        className="nav-link"
+                                        // className="nav-link"
                                         key={index}
                                         onClick={() => {
                                             navigateToTop();
                                         }}
-                                        //separate styling because can't get NavLink working with hover
                                         sx={{
                                             margin: "0 1em",
+                                            transition: "150ms",
+                                            color:
+                                                "/" + currentPage === page.href
+                                                    ? lightTheme.palette.custom
+                                                          .light
+                                                    : lightTheme.palette.custom
+                                                          .dark,
                                             "&:hover": {
                                                 color: lightTheme.palette.custom
-                                                    .dark,
+                                                    .light,
                                             },
                                         }}
                                     >

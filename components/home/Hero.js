@@ -50,6 +50,10 @@ const Hero = () => {
                         fontSize: "clamp(4rem, 15vw, 20rem)",
                         color: "transparent",
                         WebkitTextStroke: `4px ${lightTheme.palette.custom.light}`,
+                        transition: "300ms",
+                        "&:hover": {
+                            opacity: "0%",
+                        },
                     }}
                 >
                     ARTIST PORTFOLIO
@@ -61,12 +65,11 @@ const Hero = () => {
                     // position: "relative",
                     justifyContent: "center",
                     padding: "15vh 0",
-                    // zIndex: "14",
                 }}
             >
                 <SizedImage
-                    height="75vh"
-                    width="25vw"
+                    height="35rem"
+                    width="25rem"
                     image={heroContent.image}
                 />
             </Box>
