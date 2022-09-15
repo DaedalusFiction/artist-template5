@@ -11,19 +11,6 @@ const Hero = () => {
         <Container maxWidth="xl">
             <Box
                 sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    padding: "15vh 0",
-                }}
-            >
-                <SizedImage
-                    height="70vh"
-                    width="55vw"
-                    image={heroContent.image}
-                />
-            </Box>
-            <Box
-                sx={{
                     position: "fixed",
                     top: "0",
                     height: "100vh",
@@ -52,7 +39,7 @@ const Hero = () => {
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
-                    zIndex: "11",
+                    zIndex: "1",
                 }}
             >
                 <Typography
@@ -67,6 +54,21 @@ const Hero = () => {
                 >
                     ARTIST PORTFOLIO
                 </Typography>
+            </Box>
+            <Box
+                sx={{
+                    display: "flex",
+                    // position: "relative",
+                    justifyContent: "center",
+                    padding: "15vh 0",
+                    // zIndex: "14",
+                }}
+            >
+                <SizedImage
+                    height="75vh"
+                    width="25vw"
+                    image={heroContent.image}
+                />
             </Box>
         </Container>
     );
