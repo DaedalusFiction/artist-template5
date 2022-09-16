@@ -9,7 +9,7 @@ function useGetImages(category, updateCounter, lastVisible) {
         async function getImages() {
             const q = query(
                 //change this based on Firebase file structure
-                collection(db, `projects/${category}/images`),
+                collection(db, `gallery`),
                 orderBy("dateUploaded", "desc")
             );
 

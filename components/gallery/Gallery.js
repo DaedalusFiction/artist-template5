@@ -2,7 +2,7 @@ import { Box, Grid } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import GalleryImage from "./GalleryImage";
 
-const Gallery = ({ images, number }) => {
+const Gallery = ({ images }) => {
     const [columns, setColumns] = useState([[], [], []]);
 
     useEffect(() => {

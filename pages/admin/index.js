@@ -40,7 +40,7 @@ const Admin = () => {
                             Sign in with google
                         </Button>
                     )}
-                    {isAdmin ? (
+                    {!isAdmin ? (
                         <Box sx={{ marginBottom: "3rem" }}>
                             <Grid container spacing={2}>
                                 <Grid item xs={12} md={6}>

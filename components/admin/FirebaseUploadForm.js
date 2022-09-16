@@ -9,6 +9,7 @@ import { useState } from "react";
 import { db, storage } from "../../firebase";
 import { galleryCategories, galleryConfig } from "../../siteInfo";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
+import FirebaseCategorySelect from "./FirebaseCategorySelect";
 
 const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
     const [formData, setFormData] = useState(
@@ -21,6 +22,9 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
     const fileInputRef = useRef();
 
     const handleFieldChange = (e, field, index) => {
+        if (e.target.value.length > 10) {
+            return;
+        }
         const newFieldData = {
             ...formData.fields[index],
             value: e.target.value,
@@ -137,14 +141,12 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
                     () => {
                         // creates firestore database entry
                         // setUploadProgress(0);
-                        console.log("testing!");
                         getDownloadURL(uploadTask.snapshot.ref).then(
                             (downloadURL) => {
                                 downloadURLs = [...downloadURLs, downloadURL];
                                 if (
                                     downloadURLs.length >= selectedImages.length
                                 ) {
-                                    console.log("downloadURLs:", downloadURLs);
                                     setDoc(
                                         doc(
                                             db,
@@ -158,7 +160,6 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
                                             dateUploaded: Date.now(),
                                         }
                                     );
-                                    console.log("completed");
                                 }
 
                                 setFormData(
@@ -203,6 +204,10 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
                     />
                 );
             })}
+            <FirebaseCategorySelect
+                formData={formData}
+                setFormData={setFormData}
+            />
 
             <Box>
                 <Button

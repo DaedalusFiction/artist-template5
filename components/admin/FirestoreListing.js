@@ -8,7 +8,6 @@ const FirestoreListing = ({ category, updateCounter, setUpdateCounter }) => {
     const [shownImages, setShownImages] = useState([]);
 
     const handleSearchChange = (e) => {
-        console.log(images);
         if (e.target.value === "") {
             setShownImages([]);
             return;

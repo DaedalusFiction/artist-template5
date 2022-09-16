@@ -55,21 +55,6 @@ const Navbar = () => {
             <AppBar position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        {/* <Link href="/">
-                            <Box
-                                onClick={() => {
-                                    navigateToTop();
-                                }}
-                                sx={{
-                                    display: { xs: "none", lg: "flex" },
-                                    mr: 1,
-                                }}
-                            >
-                                <Typography variant="h4" component="p">
-                                    <Link href="/">{siteName}</Link>
-                                </Typography>
-                            </Box>
-                        </Link> */}
                         <Box
                             sx={{
                                 flexGrow: 1,
@@ -104,21 +89,23 @@ const Navbar = () => {
                                     display: { xs: "block", lg: "none" },
                                 }}
                             >
-                                {pages.map((page, index) => (
-                                    <MenuItem
-                                        onClick={() => {
-                                            navigateToTop();
-                                            handleCloseNavMenu();
-                                        }}
-                                        key={index}
-                                    >
-                                        <Typography textAlign="center">
-                                            <Link href={page.href}>
-                                                {page.name}
-                                            </Link>
-                                        </Typography>
-                                    </MenuItem>
-                                ))}
+                                {pages.map((page, index) => {
+                                    return (
+                                        <MenuItem
+                                            onClick={() => {
+                                                navigateToTop();
+                                                handleCloseNavMenu();
+                                            }}
+                                            key={index}
+                                        >
+                                            <Typography textAlign="center">
+                                                <Link href={page.href}>
+                                                    {page.name}
+                                                </Link>
+                                            </Typography>
+                                        </MenuItem>
+                                    );
+                                })}
                             </Menu>
                         </Box>
                         <Typography
@@ -148,10 +135,33 @@ const Navbar = () => {
                             }}
                         >
                             <Box sx={{ display: "flex", alignItems: "center" }}>
+                                <Typography
+                                    // className="nav-link"
+                                    variant="h4"
+                                    onClick={() => {
+                                        navigateToTop();
+                                    }}
+                                    sx={{
+                                        margin: "0 1em",
+                                        transition: "150ms",
+                                        color:
+                                            "/" + currentPage === "/"
+                                                ? lightTheme.palette.custom
+                                                      .light
+                                                : lightTheme.palette.custom
+                                                      .dark,
+                                        "&:hover": {
+                                            color: lightTheme.palette.custom
+                                                .light,
+                                        },
+                                    }}
+                                >
+                                    <Link href="/">{siteName}</Link>
+                                </Typography>
                                 {pages.map((page, index) => (
                                     <Typography
                                         // className="nav-link"
-                                        variant={index === 0 ? "h4" : "body1"}
+                                        variant="body1"
                                         key={index}
                                         onClick={() => {
                                             navigateToTop();
@@ -160,7 +170,7 @@ const Navbar = () => {
                                             margin: "0 1em",
                                             transition: "150ms",
                                             color:
-                                                "/" + currentPage === page.href
+                                                currentPage === page.href
                                                     ? lightTheme.palette.custom
                                                           .light
                                                     : lightTheme.palette.custom

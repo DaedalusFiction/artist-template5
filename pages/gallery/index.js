@@ -10,7 +10,7 @@ import lightTheme from "../../styles/themes/lightTheme";
 
 const Projects = () => {
     return (
-        <PageLayout name="GALLERIES">
+        <PageLayout name="GALLERY">
             <Grid className="section" container spacing={4}>
                 {galleryCategories.map((category, index) => {
                     return (

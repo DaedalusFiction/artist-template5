@@ -17,7 +17,6 @@ import lightTheme from "./styles/themes/lightTheme";
 const siteName = "ARTIST PORTFOLIO";
 
 const pages = [
-    { name: siteName, href: "/" },
     { name: "GALLERY", href: "gallery" },
     { name: "THE PROCESS", href: "process" },
     // { name: "SERVICES", href: "/services" },

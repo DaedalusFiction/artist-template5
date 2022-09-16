@@ -68,11 +68,11 @@ const Project = ({ images, category }) => {
     };
 
     return (
-        <PageLayout name={gallery}>
+        <PageLayout name={category}>
             <PaginationBar />
             <Gallery
                 images={images.slice(firstImage, firstImage + pageLimit)}
-                category="projects"
+                category="gallery"
             />
             <PaginationBar />
         </PageLayout>
@@ -80,11 +80,9 @@ const Project = ({ images, category }) => {
 };
 
 export const getServerSideProps = async (context) => {
+    const category = context.params.category;
     const imagesRef = collection(db, "gallery");
-    const q = query(
-        imagesRef,
-        where("categories", "array-contains", "landscapes")
-    );
+    const q = query(imagesRef, where("categories", "array-contains", category));
     const docsSnap = await getDocs(q);
     let images = [];
     docsSnap.docs.forEach((doc, index) => {
@@ -94,6 +92,7 @@ export const getServerSideProps = async (context) => {
     return {
         props: {
             images,
+            category,
         },
     };
 };
