@@ -1,9 +1,12 @@
 import { Box, Grid } from "@mui/material";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import GalleryImage from "./GalleryImage";
 
 const Gallery = ({ images }) => {
     const [columns, setColumns] = useState([[], [], []]);
+    const router = useRouter();
+    const { category } = router.query;
 
     useEffect(() => {
         function sortImages() {
@@ -30,7 +33,10 @@ const Gallery = ({ images }) => {
                                             key={index}
                                             sx={{ margin: "1rem 0" }}
                                         >
-                                            <GalleryImage image={image} />
+                                            <GalleryImage
+                                                image={image}
+                                                category={category}
+                                            />
                                         </Box>
                                     );
                                 })}
