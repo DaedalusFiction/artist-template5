@@ -3,7 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import React from "react";
 import Gallery from "../../components/gallery/Gallery";
 import PageLayout from "../../components/layout/PageLayout";
-import { galleryConfigs } from "../../siteInfo";
+import { galleryCategories } from "../../siteInfo";
 import SizedImage from "../../components/general/SizedImage";
 import Link from "next/link";
 import lightTheme from "../../styles/themes/lightTheme";
@@ -12,13 +12,13 @@ const Projects = () => {
     return (
         <PageLayout name="GALLERIES">
             <Grid className="section" container spacing={4}>
-                {galleryConfigs.map((galleryConfig, index) => {
+                {galleryCategories.map((category, index) => {
                     return (
                         <Grid key={index} item xs={12} sm={6} md={4}>
-                            <Link href={galleryConfig.href}>
+                            <Link href={category.name}>
                                 <Box sx={{ position: "relative" }}>
                                     <SizedImage
-                                        image={galleryConfig.image}
+                                        image={category.image}
                                         height="25rem"
                                         width="100%"
                                     />
@@ -49,7 +49,7 @@ const Projects = () => {
                                                 textTransform: "uppercase",
                                             }}
                                         >
-                                            {galleryConfig.category}
+                                            {category.name}
                                         </Typography>
                                     </Box>
                                 </Box>

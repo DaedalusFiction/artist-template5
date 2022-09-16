@@ -55,7 +55,7 @@ const Navbar = () => {
             <AppBar position="static">
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
-                        <Link href="/">
+                        {/* <Link href="/">
                             <Box
                                 onClick={() => {
                                     navigateToTop();
@@ -69,7 +69,7 @@ const Navbar = () => {
                                     <Link href="/">{siteName}</Link>
                                 </Typography>
                             </Box>
-                        </Link>
+                        </Link> */}
                         <Box
                             sx={{
                                 flexGrow: 1,
@@ -151,6 +151,7 @@ const Navbar = () => {
                                 {pages.map((page, index) => (
                                     <Typography
                                         // className="nav-link"
+                                        variant={index === 0 ? "h4" : "body1"}
                                         key={index}
                                         onClick={() => {
                                             navigateToTop();

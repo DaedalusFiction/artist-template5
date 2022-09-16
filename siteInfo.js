@@ -55,9 +55,24 @@ const heroContent = {
     },
 };
 
+const homeGalleryContent = {
+    images: [
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+    ],
+};
+
 const servicesContent = [
     {
-        title: "Service One",
+        title: "Service One!",
         price: "$200",
         description:
             "This is the sample description for the service. It is a very good description and a very good service",
@@ -240,6 +255,36 @@ const blockPhotoContentTwo = {
 // 4. Services
 // 5. Projects
 
+const galleryCategories = [
+    {
+        name: "landscapes",
+        image: { url: "/images/hero.webp", alt: "alt gallery image text" },
+    },
+    {
+        name: "animals",
+        image: { url: "/images/hero.webp", alt: "alt text" },
+    },
+    {
+        name: "portraits",
+        image: { url: "/images/hero.webp", alt: "alt text" },
+    },
+];
+
+const galleryConfig = {
+    categories: [],
+    fields: [
+        { name: "Title", type: "text", value: "" },
+        {
+            name: "Description",
+            type: "text",
+            value: "",
+            multiline: true,
+            rows: 4,
+        },
+        { name: "Year", type: "number", value: "" },
+    ],
+};
+
 const galleryConfigs = [
     {
         category: "animals",
@@ -256,6 +301,15 @@ const galleryConfigs = [
                 rows: 4,
             },
             { name: "Year", type: "number", value: "" },
+            {
+                name: "Category",
+                type: "checklist",
+                options: [
+                    { name: "Portraits", value: false },
+                    { name: "Animals", value: false },
+                    { name: "Landscapes", value: false },
+                ],
+            },
         ],
     },
     {
@@ -403,8 +457,10 @@ export {
     pages,
     navbar,
     header,
-    galleryConfigs,
+    galleryCategories,
+    galleryConfig,
     heroContent,
+    homeGalleryContent,
     blockTextOne,
     blockTextTwo,
     blockTextThree,

@@ -7,6 +7,7 @@ import MosaicSection from "../components/mosaic/MosaicSection";
 
 import {
     siteName,
+    homeGalleryContent,
     blockTextOne,
     blockTextTwo,
     blockTextThree,
@@ -16,12 +17,14 @@ import {
     mosaicSectionContentThree,
     blockPhotoContentTwo,
 } from "../siteInfo";
+import HomeGallery from "../components/home/HomeGallery";
 
 export default function Home() {
     return (
         <div>
             <Meta siteName={siteName} />
             <Hero siteName={siteName} />
+            <HomeGallery images={homeGalleryContent.images} />
             {/* <BlockText text={blockTextOne} />
       <MosaicSection
         mosaicSectionContent={mosaicSectionContentOne}

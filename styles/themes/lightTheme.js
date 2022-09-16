@@ -40,23 +40,27 @@ lightTheme = createTheme(lightTheme, {
             fontSize: "clamp(3.5rem, 5vw, 7rem)",
         },
         h2: {
+            color: lightTheme.palette.custom.light,
             fontFamily: "Raleway",
             fontWeight: "400",
             // color: darkTheme.palette.custom.dark,
             fontSize: "clamp(3rem, 4vw, 10rem)",
         },
         h3: {
+            color: lightTheme.palette.custom.light,
             fontFamily: "Raleway",
             fontWeight: "400",
             // color: darkTheme.palette.custom.dark,
         },
         h4: {
+            color: lightTheme.palette.custom.light,
             fontFamily: "Raleway",
             fontSize: "1.75rem",
             fontWeight: "400",
             // color: darkTheme.palette.custom.dark,
         },
         h5: {
+            // color: lightTheme.palette.custom.light,
             fontFamily: "EB Garamond",
             fontSize: "1.25rem",
             fontWeight: "400",

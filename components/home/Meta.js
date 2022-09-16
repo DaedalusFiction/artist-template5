@@ -1,7 +1,8 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
+import { siteName } from "../../siteInfo";
 
-const Meta = ({ siteName }) => {
+const Meta = () => {
     const router = useRouter();
     return (
         <div>
