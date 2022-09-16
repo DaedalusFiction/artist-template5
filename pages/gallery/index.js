@@ -15,7 +15,7 @@ const Projects = () => {
                 {galleryCategories.map((category, index) => {
                     return (
                         <Grid key={index} item xs={12} sm={6} md={4}>
-                            <Link href={category.name}>
+                            <Link href={`/gallery/${category.name}`}>
                                 <Box sx={{ position: "relative" }}>
                                     <SizedImage
                                         image={category.image}

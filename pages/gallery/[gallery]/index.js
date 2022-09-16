@@ -5,6 +5,7 @@ import {
     orderBy,
     query,
     startAfter,
+    where,
 } from "firebase/firestore";
 import Gallery from "../../../components/gallery/Gallery";
 import { db } from "../../../firebase";
@@ -79,10 +80,12 @@ const Project = ({ images, category }) => {
 };
 
 export const getServerSideProps = async (context) => {
-    const docsSnap = await getDocs(
-        collection(db, "galleries"),
-        where("categories", "array-contains", context.page)
+    const imagesRef = collection(db, "gallery");
+    const q = query(
+        imagesRef,
+        where("categories", "array-contains", "landscapes")
     );
+    const docsSnap = await getDocs(q);
     let images = [];
     docsSnap.docs.forEach((doc, index) => {
         images = [...images, doc.data()];
