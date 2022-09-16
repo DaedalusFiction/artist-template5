@@ -51,6 +51,7 @@ const Hero = () => {
                         color: "transparent",
                         WebkitTextStroke: `4px ${lightTheme.palette.custom.light}`,
                         transition: "300ms",
+                        opacity: "50%",
                         "&:hover": {
                             opacity: "0%",
                         },

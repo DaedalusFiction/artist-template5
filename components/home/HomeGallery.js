@@ -11,14 +11,9 @@ const HomeGallery = ({ images }) => {
                 <Grid item xs={12} md={6}>
                     <Box
                         className="flex-center"
-                        // sx={{ height: "100%", width: "100%" }}
+                        sx={{ height: "100%", width: "100%", padding: "4rem" }}
                     >
                         <NativeImage image={images[0]} />
-                        {/* <SizedImage
-                            width="20rem"
-                            height="30rem"
-                            image={images[0]}
-                        /> */}
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
