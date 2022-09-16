@@ -44,7 +44,7 @@ const header = {
 // 3. Home
 
 const heroContent = {
-    image: { url: "/images/hero4.webp", alt: "alt hero text" },
+    image: { url: "/images/hero.webp", alt: "alt hero text" },
     primaryText: "ARTIST PORTFOLIO TEMPLATE",
     secondaryText: "Created by FictionalWeb.com",
     buttonOne: {
@@ -56,19 +56,19 @@ const heroContent = {
 
 const homeGalleryContent = {
     images: [
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
     ],
 };
 
@@ -78,7 +78,7 @@ const servicesContent = [
         price: "$200",
         description:
             "This is the sample description for the service. It is a very good description and a very good service",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         button: { text: "Book Now!", href: "/contact" },
         features: [
             {
@@ -100,7 +100,7 @@ const servicesContent = [
         price: "$400-800",
         description:
             "This is the sample description for the service. It is a very good description and a very good service",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         button: { text: "Book Now!", href: "/contact" },
         features: [
             {
@@ -126,7 +126,7 @@ const servicesContent = [
         price: "Custom",
         description:
             "This is the sample description for the service. It is a very good description and a very good service",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         button: { text: "Book Now!", href: "/contact" },
         features: [
             {
@@ -184,12 +184,12 @@ const mosaicSectionContentOne = {
         variant: "contained",
     },
     images: [
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
     ],
 };
 const mosaicSectionContentTwo = {
@@ -203,12 +203,12 @@ const mosaicSectionContentTwo = {
         variant: "contained",
     },
     images: [
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
     ],
 };
 const mosaicSectionContentThree = {
@@ -222,12 +222,12 @@ const mosaicSectionContentThree = {
         variant: "contained",
     },
     images: [
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
-        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+        { url: "/images/placeholder.webp", alt: "alt placeholder text" },
     ],
 };
 
@@ -240,7 +240,7 @@ const blockPhotoContentOne = {
         href: "/about",
         variant: "contained",
     },
-    image: { url: "/images/hero.webp", alt: "alt hero text" },
+    image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
 };
 const blockPhotoContentTwo = {
     background: lightTheme.palette.background.accentLight,
@@ -251,7 +251,7 @@ const blockPhotoContentTwo = {
         href: "/about",
         variant: "contained",
     },
-    image: { url: "/images/hero.webp", alt: "alt hero text" },
+    image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
 };
 
 // 4. Services
@@ -260,19 +260,22 @@ const blockPhotoContentTwo = {
 const galleryCategories = [
     {
         name: "landscapes",
-        image: { url: "/images/hero.webp", alt: "alt gallery image text" },
+        image: {
+            url: "/images/placeholder.webp",
+            alt: "alt gallery image text",
+        },
     },
     {
         name: "animals",
-        image: { url: "/images/hero.webp", alt: "alt text" },
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
     },
     {
         name: "portraits",
-        image: { url: "/images/hero.webp", alt: "alt text" },
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
     },
     {
         name: "Black and White",
-        image: { url: "/images/hero.webp", alt: "alt text" },
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
     },
 ];
 
@@ -295,7 +298,7 @@ const galleryConfigs = [
     {
         category: "animals",
         href: "/projects/animals",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         fields: [
             { name: "Title", type: "text", value: "" },
 
@@ -321,7 +324,7 @@ const galleryConfigs = [
     {
         category: "portraits",
         href: "/projects/portraits",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         fields: [
             { name: "Title", type: "text", value: "" },
 
@@ -338,7 +341,7 @@ const galleryConfigs = [
     {
         category: "goats",
         href: "/projects/goats",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         fields: [
             { name: "Title", type: "text", value: "" },
 
@@ -355,7 +358,7 @@ const galleryConfigs = [
     {
         category: "sports",
         href: "/projects/sports",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         fields: [
             { name: "Title", type: "text", value: "" },
 
@@ -372,7 +375,7 @@ const galleryConfigs = [
     {
         category: "illustrations",
         href: "/projects/illustrations",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         fields: [
             { name: "Title", type: "text", value: "" },
 
@@ -391,7 +394,7 @@ const galleryConfigs = [
 // 6. Studio
 
 const leadProfile = {
-    image: { url: "/images/hero.webp", alt: "alt hero text" },
+    image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
     name: "Artist Name",
     content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda. Laboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.\n\nDolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nLorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda. Laboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.\n\nDolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
@@ -399,19 +402,19 @@ const leadProfile = {
 
 const secondaryProfiles = [
     {
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         name: "Designer One",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.",
     },
     {
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         name: "Designer Two",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
     },
     {
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         name: "Designer Three",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nDolore ipsa sed asperiores voluptatibus nam modi.",
@@ -429,7 +432,7 @@ const processSteps = [
         name: "STEP ONE",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         reverse: false,
     },
     {
@@ -437,7 +440,7 @@ const processSteps = [
         name: "STEP TWO",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         reverse: true,
     },
     {
@@ -445,7 +448,7 @@ const processSteps = [
         name: "STEP THREE",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nDolore ipsa sed asperiores voluptatibus nam modi.",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         reverse: false,
     },
     {
@@ -453,7 +456,7 @@ const processSteps = [
         name: "STEP FOUR",
         content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.",
-        image: { url: "/images/hero.webp", alt: "alt hero text" },
+        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         reverse: true,
     },
 ];

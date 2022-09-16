@@ -4,7 +4,7 @@ import Link from "next/link";
 import lightTheme from "../../styles/themes/lightTheme";
 import { pages, siteName, heroContent } from "../../siteInfo";
 import SocialMediaIcons from "../general/SocialMediaIcons";
-import SizedImage from "../general/SizedImage.js";
+import NativeImage from "../general/NativeImage.js";
 
 const Hero = () => {
     return (
@@ -58,7 +58,7 @@ const Hero = () => {
                         color: "transparent",
                         WebkitTextStroke: `4px ${lightTheme.palette.custom.light}`,
                         transition: "300ms",
-                        opacity: { xs: "0", md: "50%" },
+                        opacity: { xs: "0", md: "70%" },
                         "&:hover": {
                             opacity: "0%",
                         },
@@ -78,11 +78,7 @@ const Hero = () => {
                     padding: "15vh 0",
                 }}
             >
-                <SizedImage
-                    height="35rem"
-                    width="25rem"
-                    image={heroContent.image}
-                />
+                <NativeImage size={800} image={heroContent.image} />
             </Box>
         </Container>
     );
