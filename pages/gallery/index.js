@@ -31,7 +31,7 @@ const Projects = () => {
                                             backgroundColor:
                                                 "rgba(0, 0, 0, 0.4)",
                                             left: "0",
-                                            opacity: "0",
+                                            opacity: { xs: "100%", lg: "0" },
                                             transition: "300ms",
                                             "&:hover": {
                                                 opacity: "100%",

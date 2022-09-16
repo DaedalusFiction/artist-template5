@@ -267,6 +267,10 @@ const galleryCategories = [
         name: "portraits",
         image: { url: "/images/hero.webp", alt: "alt text" },
     },
+    {
+        name: "Black and White",
+        image: { url: "/images/hero.webp", alt: "alt text" },
+    },
 ];
 
 const galleryConfig = {
