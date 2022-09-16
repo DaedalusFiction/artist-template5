@@ -18,10 +18,11 @@ import {
     blockPhotoContentTwo,
 } from "../siteInfo";
 import HomeGallery from "../components/home/HomeGallery";
+import { Box } from "@mui/material";
 
 export default function Home() {
     return (
-        <div>
+        <Box sx={{ position: "relative" }}>
             <Meta siteName={siteName} />
             <Hero siteName={siteName} />
             <HomeGallery images={homeGalleryContent.images} />
@@ -44,6 +45,6 @@ export default function Home() {
         mosaicSectionContent={mosaicSectionContentThree}
         variation={3}
       /> */}
-        </div>
+        </Box>
     );
 }

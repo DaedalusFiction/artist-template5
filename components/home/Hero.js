@@ -13,6 +13,8 @@ const Hero = () => {
                 sx={{
                     position: "fixed",
                     top: "0",
+                    left: "0",
+                    width: "100%",
                     height: "100vh",
                     display: "flex",
                     justifyContent: "center",
@@ -26,6 +28,9 @@ const Hero = () => {
                         textAlign: "center",
                         fontWeight: "900",
                         fontSize: "clamp(4rem, 15vw, 20rem)",
+                        writingMode: { xs: "vertical-lr", md: "inherit" },
+                        textOrientation: { xs: "upright", md: "inherit" },
+                        lineHeight: { xs: "2.5em", md: ".8em" },
                     }}
                 >
                     ARTIST PORTFOLIO
@@ -35,7 +40,9 @@ const Hero = () => {
                 sx={{
                     position: "fixed",
                     top: "0",
+                    left: "0",
                     height: "100vh",
+                    width: "100%",
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center",
@@ -51,10 +58,13 @@ const Hero = () => {
                         color: "transparent",
                         WebkitTextStroke: `4px ${lightTheme.palette.custom.light}`,
                         transition: "300ms",
-                        opacity: "50%",
+                        opacity: { xs: "0", md: "50%" },
                         "&:hover": {
                             opacity: "0%",
                         },
+                        writingMode: { xs: "vertical-lr", md: "inherit" },
+                        textOrientation: { xs: "upright", md: "inherit" },
+                        lineHeight: { xs: "2.5em", md: ".8em" },
                     }}
                 >
                     ARTIST PORTFOLIO

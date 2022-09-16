@@ -66,6 +66,9 @@ const homeGalleryContent = {
         { url: "/images/hero.webp", alt: "alt hero text" },
         { url: "/images/hero.webp", alt: "alt hero text" },
         { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
+        { url: "/images/hero.webp", alt: "alt hero text" },
     ],
 };
 
