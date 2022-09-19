@@ -16,14 +16,6 @@ import lightTheme from "./styles/themes/lightTheme";
 
 const siteName = "ARTIST PORTFOLIO";
 
-const pages = [
-    { name: "GALLERY", href: "gallery" },
-    { name: "THE PROCESS", href: "process" },
-    // { name: "SERVICES", href: "/services" },
-    { name: "ABOUT", href: "studio" },
-    { name: "CONTACT", href: "contact" },
-];
-
 // 2. Layout
 
 const navbar = {
@@ -260,6 +252,7 @@ const blockPhotoContentTwo = {
 const galleryCategories = [
     {
         name: "landscapes",
+        href: "/gallery/landscapes",
         image: {
             url: "/images/placeholder.webp",
             alt: "alt gallery image text",
@@ -267,14 +260,17 @@ const galleryCategories = [
     },
     {
         name: "animals",
+        href: "/gallery/animals",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
     },
     {
         name: "portraits",
+        href: "/gallery/portraits",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
     },
     {
         name: "Black and White",
+        href: "/gallery/black%20and%20white",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
     },
 ];
@@ -315,103 +311,6 @@ const galleryConfig = {
         { name: "Year", type: "number", value: "" },
     ],
 };
-
-const galleryConfigs = [
-    {
-        category: "animals",
-        href: "/projects/animals",
-        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
-        fields: [
-            { name: "Title", type: "text", value: "" },
-
-            {
-                name: "Description",
-                type: "text",
-                value: "",
-                multiline: true,
-                rows: 4,
-            },
-            { name: "Year", type: "number", value: "" },
-            {
-                name: "Category",
-                type: "checklist",
-                options: [
-                    { name: "Portraits", value: false },
-                    { name: "Animals", value: false },
-                    { name: "Landscapes", value: false },
-                ],
-            },
-        ],
-    },
-    {
-        category: "portraits",
-        href: "/projects/portraits",
-        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
-        fields: [
-            { name: "Title", type: "text", value: "" },
-
-            {
-                name: "Description",
-                type: "text",
-                value: "",
-                multiline: true,
-                rows: 4,
-            },
-            { name: "Year", type: "number", value: "" },
-        ],
-    },
-    {
-        category: "goats",
-        href: "/projects/goats",
-        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
-        fields: [
-            { name: "Title", type: "text", value: "" },
-
-            {
-                name: "Description",
-                type: "text",
-                value: "",
-                multiline: true,
-                rows: 4,
-            },
-            { name: "Year", type: "number", value: "" },
-        ],
-    },
-    {
-        category: "sports",
-        href: "/projects/sports",
-        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
-        fields: [
-            { name: "Title", type: "text", value: "" },
-
-            {
-                name: "Description",
-                type: "text",
-                value: "",
-                multiline: true,
-                rows: 4,
-            },
-            { name: "Year", type: "number", value: "" },
-        ],
-    },
-    {
-        category: "illustrations",
-        href: "/projects/illustrations",
-        image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
-        fields: [
-            { name: "Title", type: "text", value: "" },
-
-            {
-                name: "Description",
-                type: "text",
-                value: "",
-                multiline: true,
-                rows: 4,
-            },
-            { name: "Year", type: "number", value: "" },
-        ],
-    },
-];
 
 // 6. Studio
 
@@ -481,6 +380,13 @@ const processSteps = [
         image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
         reverse: true,
     },
+];
+const pages = [
+    { name: "GALLERY", href: "gallery", subPages: galleryCategories },
+    { name: "THE PROCESS", href: "process", subPages: [] },
+    // { name: "SERVICES", href: "/services" },
+    { name: "ABOUT", href: "studio", subPages: [] },
+    { name: "CONTACT", href: "contact", subPages: [] },
 ];
 
 export {
