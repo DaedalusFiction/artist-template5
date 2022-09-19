@@ -7,32 +7,55 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import { Button, Grid, Slide, useScrollTrigger } from "@mui/material";
+import { Button, Fade, Grid, Slide, useScrollTrigger } from "@mui/material";
 import Link from "next/link";
 import lightTheme from "../../styles/themes/lightTheme";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navigateToTop } from "../../utility/navigateToTop";
 import { pages, siteName, navbar } from "../../siteInfo";
 import SocialMediaIcons from "../general/SocialMediaIcons";
 import { useRouter } from "next/router";
-
-const activeStyle = {
-    color: lightTheme.palette.custom.light,
-};
-
-const inactiveStyle = {
-    color: lightTheme.palette.custom.light,
-};
 
 const Navbar = () => {
     const [anchorElNav, setAnchorElNav] = useState(null);
     const [expanded, setExpanded] = useState(false);
     const router = useRouter();
     const currentPage = router.pathname.split("/")[1];
-    const trigger = useScrollTrigger({
-        disableHysteresis: true,
-        threshold: 0,
-    });
+    // const trigger = useScrollTrigger({
+    //     disableHysteresis: true,
+    //     threshold: 0,
+    // });
+
+    const [trigger, setTrigger] = useState(true);
+
+    useEffect(() => {
+        const threshold = 0;
+        let lastScrollY = window.pageYOffset;
+        let ticking = false;
+
+        const updateScrollDir = () => {
+            const scrollY = window.pageYOffset;
+
+            if (Math.abs(scrollY - lastScrollY) < threshold) {
+                ticking = false;
+                return;
+            }
+            setTrigger(scrollY > lastScrollY ? false : true);
+            lastScrollY = scrollY > 0 ? scrollY : 0;
+            ticking = false;
+        };
+
+        const onScroll = () => {
+            if (!ticking) {
+                window.requestAnimationFrame(updateScrollDir);
+                ticking = true;
+            }
+        };
+
+        window.addEventListener("scroll", onScroll);
+
+        return () => window.removeEventListener("scroll", onScroll);
+    }, [trigger]);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -227,49 +250,58 @@ const Navbar = () => {
                     </Grid>
 
                     {expanded && (
-                        <Grid container>
-                            <Grid item xs={4}></Grid>
-                            <Grid item xs={4}>
-                                {pages.map((page, index) => {
-                                    return (
-                                        <Box key={index}>
-                                            {page.subPages.length > 0 &&
-                                                page.subPages.map(
-                                                    (subPage, index) => {
-                                                        return (
-                                                            <Typography
-                                                                key={index}
-                                                                sx={{
-                                                                    margin: ".25em 0",
-                                                                    transition:
-                                                                        "150ms",
-                                                                    "&:hover": {
+                        <Fade in={expanded}>
+                            <Grid container>
+                                <Grid item xs={4}></Grid>
+                                <Grid item xs={4}>
+                                    {pages.map((page, index) => {
+                                        return (
+                                            <Box key={index}>
+                                                {page.subPages.length > 0 &&
+                                                    page.subPages.map(
+                                                        (subPage, index) => {
+                                                            return (
+                                                                <Typography
+                                                                    key={index}
+                                                                    sx={{
+                                                                        textTransform:
+                                                                            "capitalize",
+                                                                        margin: ".5em 0",
+                                                                        transition:
+                                                                            "150ms",
                                                                         color: lightTheme
                                                                             .palette
                                                                             .custom
-                                                                            .light,
-                                                                    },
-                                                                }}
-                                                            >
-                                                                <Link
-                                                                    href={
-                                                                        subPage.href
-                                                                    }
+                                                                            .dark,
+                                                                        "&:hover":
+                                                                            {
+                                                                                color: lightTheme
+                                                                                    .palette
+                                                                                    .custom
+                                                                                    .light,
+                                                                            },
+                                                                    }}
                                                                 >
-                                                                    {
-                                                                        subPage.name
-                                                                    }
-                                                                </Link>
-                                                            </Typography>
-                                                        );
-                                                    }
-                                                )}
-                                        </Box>
-                                    );
-                                })}
+                                                                    <Link
+                                                                        href={
+                                                                            subPage.href
+                                                                        }
+                                                                    >
+                                                                        {
+                                                                            subPage.name
+                                                                        }
+                                                                    </Link>
+                                                                </Typography>
+                                                            );
+                                                        }
+                                                    )}
+                                            </Box>
+                                        );
+                                    })}
+                                </Grid>
+                                <Grid item xs={4}></Grid>
                             </Grid>
-                            <Grid item xs={4}></Grid>
-                        </Grid>
+                        </Fade>
                     )}
                 </Container>
             </AppBar>
