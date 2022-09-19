@@ -278,9 +278,31 @@ const galleryCategories = [
         image: { url: "/images/placeholder.webp", alt: "alt text" },
     },
 ];
+const gallerySubcategories = [
+    {
+        name: "goats",
+        image: {
+            url: "/images/placeholder.webp",
+            alt: "alt gallery image text",
+        },
+    },
+    {
+        name: "horses",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+    },
+    {
+        name: "turtles",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+    },
+    {
+        name: "frogs",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+    },
+];
 
 const galleryConfig = {
     categories: [],
+    subCategories: [],
     fields: [
         { name: "Title", type: "text", value: "" },
         {
@@ -467,6 +489,7 @@ export {
     navbar,
     header,
     galleryCategories,
+    gallerySubcategories,
     galleryConfig,
     heroContent,
     homeGalleryContent,

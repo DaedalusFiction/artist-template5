@@ -56,6 +56,28 @@ const Project = ({ image }) => {
                                         </Grid>
                                     );
                                 })}
+                                <Grid container>
+                                    <Grid item xs={4}>
+                                        <Typography
+                                            variant="subtitle2"
+                                            sx={{ fontWeight: "bold" }}
+                                        >
+                                            Subcategories:
+                                        </Typography>
+                                    </Grid>
+                                    <Grid item xs={8}>
+                                        {
+                                            <Typography
+                                                variant="subtitle2"
+                                                sx={{
+                                                    whiteSpace: "pre-wrap",
+                                                }}
+                                            >
+                                                {image.subCategories.join(", ")}
+                                            </Typography>
+                                        }
+                                    </Grid>
+                                </Grid>
                             </Box>
                         </Grid>
                     </Grid>

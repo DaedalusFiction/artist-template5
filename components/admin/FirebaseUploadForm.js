@@ -7,7 +7,11 @@ import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { db, storage } from "../../firebase";
-import { galleryCategories, galleryConfig } from "../../siteInfo";
+import {
+    galleryCategories,
+    gallerySubcategories,
+    galleryConfig,
+} from "../../siteInfo";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
 import FirebaseCategorySelect from "./FirebaseCategorySelect";
 
