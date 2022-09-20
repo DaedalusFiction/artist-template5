@@ -16,6 +16,7 @@ const index = () => {
                     gap: "1em",
                 }}
             >
+                {/* pages[2] returns About subpages from /siteinfo */}
                 {pages[2].subPages.map((subPage, index) => {
                     return (
                         <Button key={index}>

@@ -6,7 +6,7 @@ import PageLayout from "../../../components/layout/PageLayout";
 
 const index = () => {
     return (
-        <PageLayout name="ABOUT">
+        <PageLayout name="WORK">
             <Box className="section">
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>
