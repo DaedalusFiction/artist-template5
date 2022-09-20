@@ -382,11 +382,11 @@ const processSteps = [
     },
 ];
 const pages = [
-    { name: "GALLERY", href: "gallery", subPages: galleryCategories },
-    { name: "THE PROCESS", href: "process", subPages: [] },
+    { name: "GALLERY", href: "/gallery", subPages: galleryCategories },
+    { name: "THE PROCESS", href: "/process", subPages: [] },
     // { name: "SERVICES", href: "/services" },
-    { name: "ABOUT", href: "studio", subPages: [] },
-    { name: "CONTACT", href: "contact", subPages: [] },
+    { name: "ABOUT", href: "/studio", subPages: [] },
+    { name: "CONTACT", href: "/contact", subPages: [] },
 ];
 
 export {
