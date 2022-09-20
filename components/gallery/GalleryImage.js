@@ -7,11 +7,7 @@ const GalleryImage = ({ image, category }) => {
     const [ratio, setRatio] = useState(1 / 1); // default to 16:9
 
     return (
-        <Box
-            onClick={() => {
-                console.log(image);
-            }}
-        >
+        <Box>
             <Link href={`/gallery/${category}/${image.id}`}>
                 <Box
                     className="link"

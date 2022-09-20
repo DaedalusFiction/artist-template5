@@ -312,7 +312,9 @@ const galleryConfig = {
     ],
 };
 
-// 6. Studio
+// 7. About
+
+// 7a. Artists
 
 const leadProfile = {
     image: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
@@ -341,7 +343,35 @@ const secondaryProfiles = [
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nDolore ipsa sed asperiores voluptatibus nam modi.",
     },
 ];
-// 7. About
+
+// 7b. Studio
+
+const studioContent = {
+    imageOne: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    imageTwo: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    imageThree: {
+        url: "/images/placeholder.webp",
+        alt: "alt placeholder text",
+    },
+    header: "Studio Header",
+    content:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
+};
+
+// 7c. Work
+
+const workContent = {
+    imageOne: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    imageTwo: { url: "/images/placeholder.webp", alt: "alt placeholder text" },
+    imageThree: {
+        url: "/images/placeholder.webp",
+        alt: "alt placeholder text",
+    },
+    header: "Work Header",
+    content:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
+};
+
 // 8. Social Media
 
 // 9. Process
@@ -418,5 +448,7 @@ export {
     servicesContent,
     leadProfile,
     secondaryProfiles,
+    studioContent,
+    workContent,
     processSteps,
 };

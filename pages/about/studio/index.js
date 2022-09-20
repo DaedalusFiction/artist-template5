@@ -1,7 +1,11 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import SizedImage from "../../../components/general/SizedImage";
-import { leadProfile, secondaryProfiles } from "../../../siteInfo";
+import {
+    leadProfile,
+    secondaryProfiles,
+    studioContent,
+} from "../../../siteInfo";
 import PageLayout from "../../../components/layout/PageLayout";
 
 const index = () => {
@@ -13,14 +17,16 @@ const index = () => {
                         <SizedImage
                             height="30rem"
                             width="100%"
-                            image={leadProfile.image}
+                            image={studioContent.imageOne}
                         />
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Typography variant="h3">{leadProfile.name}</Typography>
+                        <Typography variant="h3">
+                            {studioContent.header}
+                        </Typography>
                         <br />
                         <Typography sx={{ whiteSpace: "pre-wrap" }}>
-                            {leadProfile.content}
+                            {studioContent.content}
                         </Typography>
                     </Grid>
                     {/* {secondaryProfiles.map((profile, index) => {

@@ -73,7 +73,10 @@ const Project = ({ image }) => {
                                                     whiteSpace: "pre-wrap",
                                                 }}
                                             >
-                                                {image.subCategories.join(", ")}
+                                                {image.subCategories &&
+                                                    image.subCategories.join(
+                                                        ", "
+                                                    )}
                                             </Typography>
                                         }
                                     </Grid>
