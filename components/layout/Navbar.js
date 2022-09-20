@@ -87,7 +87,7 @@ const Navbar = () => {
             <AppBar position="static" onMouseLeave={handleMouseLeave}>
                 <Container sx={{ padding: ".5rem 0" }} maxWidth="xl">
                     <Grid container>
-                        <Grid item xs={6}>
+                        <Grid item xs={3}>
                             <Box
                                 sx={{
                                     flexGrow: 1,
@@ -144,165 +144,194 @@ const Navbar = () => {
                                 </Menu>
                             </Box>
                         </Grid>
-                        <Grid item xs={6}>
-                            <Typography
-                                variant="h3"
-                                noWrap
-                                onClick={() => {
-                                    navigateToTop();
-                                }}
-                                sx={{
-                                    mr: 2,
-                                    display: { xs: "flex", lg: "none" },
-                                    fontSize: "1.75rem",
-                                    flexGrow: 1,
-                                    fontWeight: 700,
-                                    color: lightTheme.palette.custom.dark,
-                                }}
-                            >
-                                <Link href="/" style={{ color: "inherit" }}>
-                                    {siteName}
-                                </Link>
-                            </Typography>
-                        </Grid>
-                    </Grid>
-
-                    {/* desktop view */}
-                    <Grid container>
-                        <Grid item xs={4}>
-                            <Typography
-                                // className="nav-link"
-                                variant="h4"
-                                onClick={() => {
-                                    navigateToTop();
-                                }}
-                                sx={{
-                                    margin: "0 1em",
-                                    transition: "150ms",
-                                    color:
-                                        "/" + currentPage === "/"
-                                            ? lightTheme.palette.custom.light
-                                            : lightTheme.palette.custom.dark,
-                                    "&:hover": {
-                                        color: lightTheme.palette.custom.light,
-                                    },
-                                }}
-                            >
-                                <Link href="/">{siteName}</Link>
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={4}>
+                        <Grid item xs>
                             <Box
                                 sx={{
                                     display: "flex",
                                     alignItems: "center",
-                                    width: "100%",
-                                    justifyContent: "space-around",
+                                    height: "100%",
                                 }}
                             >
-                                {pages.map((page, index) => (
-                                    <Link href={page.href} key={index}>
-                                        <Button
-                                            onMouseEnter={handleMouseEnter}
-                                            size="large"
-                                            sx={{
-                                                color:
-                                                    currentPage === page.href
-                                                        ? lightTheme.palette
-                                                              .custom.light
-                                                        : lightTheme.palette
-                                                              .custom.dark,
-                                                "&:hover": {
-                                                    color: lightTheme.palette
-                                                        .custom.light,
-                                                },
-                                            }}
-                                        >
-                                            {page.name}
-                                        </Button>
+                                <Typography
+                                    variant="h3"
+                                    noWrap
+                                    onClick={() => {
+                                        navigateToTop();
+                                    }}
+                                    sx={{
+                                        mr: 2,
+                                        display: { xs: "flex", lg: "none" },
+                                        fontSize: "1.75rem",
+                                        flexGrow: 1,
+                                        fontWeight: 700,
+                                        color: lightTheme.palette.custom.dark,
+                                    }}
+                                >
+                                    <Link href="/" style={{ color: "inherit" }}>
+                                        {siteName}
                                     </Link>
-                                ))}
-                            </Box>
-                        </Grid>
-                        <Grid item xs={4}>
-                            <Box
-                                sx={{
-                                    display: "flex",
-                                    gap: "1em",
-                                    justifyContent: "end",
-                                    width: "100%",
-                                }}
-                            >
-                                <SocialMediaIcons
-                                    color="secondary"
-                                    fontSize="20px"
-                                />
-                                <Link href={navbar.buttonOne.href}>
-                                    <Button
-                                        color="secondary"
-                                        variant={navbar.buttonOne.variant}
-                                    >
-                                        {navbar.buttonOne.text}
-                                    </Button>
-                                </Link>
+                                </Typography>
                             </Box>
                         </Grid>
                     </Grid>
 
-                    {expanded && (
-                        <Fade in={expanded}>
-                            <Grid container>
-                                <Grid item xs={4}></Grid>
-                                <Grid item xs={4}>
-                                    {pages.map((page, index) => {
-                                        return (
-                                            <Box key={index}>
-                                                {page.subPages.length > 0 &&
-                                                    page.subPages.map(
-                                                        (subPage, index) => {
-                                                            return (
-                                                                <Typography
-                                                                    key={index}
-                                                                    sx={{
-                                                                        textTransform:
-                                                                            "capitalize",
-                                                                        margin: ".5em 0",
-                                                                        transition:
-                                                                            "150ms",
-                                                                        color: lightTheme
-                                                                            .palette
-                                                                            .custom
-                                                                            .dark,
-                                                                        "&:hover":
-                                                                            {
-                                                                                color: lightTheme
-                                                                                    .palette
-                                                                                    .custom
-                                                                                    .light,
-                                                                            },
-                                                                    }}
-                                                                >
-                                                                    <Link
-                                                                        href={
-                                                                            subPage.href
-                                                                        }
-                                                                    >
-                                                                        {
-                                                                            subPage.name
-                                                                        }
-                                                                    </Link>
-                                                                </Typography>
-                                                            );
-                                                        }
-                                                    )}
-                                            </Box>
-                                        );
-                                    })}
-                                </Grid>
-                                <Grid item xs={4}></Grid>
+                    {/* desktop view */}
+                    <Box sx={{ display: { xs: "none", lg: "inherit" } }}>
+                        <Grid container>
+                            <Grid item xs={4}>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        height: "100%",
+                                    }}
+                                >
+                                    <Typography
+                                        // className="nav-link"
+                                        variant="h4"
+                                        onClick={() => {
+                                            navigateToTop();
+                                        }}
+                                        sx={{
+                                            margin: "0 1em",
+                                            transition: "150ms",
+                                            color:
+                                                "/" + currentPage === "/"
+                                                    ? lightTheme.palette.custom
+                                                          .light
+                                                    : lightTheme.palette.custom
+                                                          .dark,
+                                            "&:hover": {
+                                                color: lightTheme.palette.custom
+                                                    .light,
+                                            },
+                                        }}
+                                    >
+                                        <Link href="/">{siteName}</Link>
+                                    </Typography>
+                                </Box>
                             </Grid>
-                        </Fade>
-                    )}
+                            <Grid item xs={4}>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        alignItems: "center",
+                                        width: "100%",
+                                        justifyContent: "space-around",
+                                    }}
+                                >
+                                    {pages.map((page, index) => (
+                                        <Link href={page.href} key={index}>
+                                            <Button
+                                                onMouseEnter={handleMouseEnter}
+                                                size="large"
+                                                sx={{
+                                                    color:
+                                                        currentPage ===
+                                                        page.href
+                                                            ? lightTheme.palette
+                                                                  .custom.light
+                                                            : lightTheme.palette
+                                                                  .custom.dark,
+                                                    "&:hover": {
+                                                        color: lightTheme
+                                                            .palette.custom
+                                                            .light,
+                                                    },
+                                                }}
+                                            >
+                                                {page.name}
+                                            </Button>
+                                        </Link>
+                                    ))}
+                                </Box>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Box
+                                    sx={{
+                                        display: "flex",
+                                        gap: "1em",
+                                        justifyContent: "end",
+                                        alignItems: "center",
+                                        width: "100%",
+                                        height: "100%",
+                                    }}
+                                >
+                                    <SocialMediaIcons
+                                        color="secondary"
+                                        fontSize="20px"
+                                    />
+                                    <Link href={navbar.buttonOne.href}>
+                                        <Button
+                                            color="secondary"
+                                            variant={navbar.buttonOne.variant}
+                                        >
+                                            {navbar.buttonOne.text}
+                                        </Button>
+                                    </Link>
+                                </Box>
+                            </Grid>
+                        </Grid>
+                        {expanded && (
+                            <Fade in={expanded}>
+                                <Grid container>
+                                    <Grid item xs={4}></Grid>
+                                    <Grid item xs={4}>
+                                        {pages.map((page, index) => {
+                                            return (
+                                                <Box key={index}>
+                                                    {page.subPages.length > 0 &&
+                                                        page.subPages.map(
+                                                            (
+                                                                subPage,
+                                                                index
+                                                            ) => {
+                                                                return (
+                                                                    <Typography
+                                                                        key={
+                                                                            index
+                                                                        }
+                                                                        sx={{
+                                                                            textTransform:
+                                                                                "capitalize",
+                                                                            margin: ".5em 0",
+                                                                            transition:
+                                                                                "150ms",
+                                                                            color: lightTheme
+                                                                                .palette
+                                                                                .custom
+                                                                                .dark,
+                                                                            "&:hover":
+                                                                                {
+                                                                                    color: lightTheme
+                                                                                        .palette
+                                                                                        .custom
+                                                                                        .light,
+                                                                                },
+                                                                        }}
+                                                                    >
+                                                                        <Link
+                                                                            href={
+                                                                                subPage.href
+                                                                            }
+                                                                        >
+                                                                            {
+                                                                                subPage.name
+                                                                            }
+                                                                        </Link>
+                                                                    </Typography>
+                                                                );
+                                                            }
+                                                        )}
+                                                </Box>
+                                            );
+                                        })}
+                                    </Grid>
+                                    <Grid item xs={4}></Grid>
+                                </Grid>
+                            </Fade>
+                        )}
+                    </Box>
                 </Container>
             </AppBar>
         </Slide>
