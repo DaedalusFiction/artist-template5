@@ -29,7 +29,7 @@ const Navbar = () => {
     const [trigger, setTrigger] = useState(true);
 
     useEffect(() => {
-        const threshold = 0;
+        const threshold = 30;
         let lastScrollY = window.pageYOffset;
         let ticking = false;
 
