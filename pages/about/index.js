@@ -1,12 +1,36 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Link, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import SizedImage from "../../components/general/SizedImage";
-import { leadProfile, secondaryProfiles } from "../../siteInfo";
+import { leadProfile, pages, secondaryProfiles } from "../../siteInfo";
 import PageLayout from "../../components/layout/PageLayout";
+import lightTheme from "../../styles/themes/lightTheme";
 
 const index = () => {
     return (
         <PageLayout name="ABOUT">
+            <Box
+                sx={{
+                    margin: "2em 0",
+                    display: "flex",
+                    justifyContent: "center",
+                    gap: "1em",
+                }}
+            >
+                {pages[2].subPages.map((subPage, index) => {
+                    return (
+                        <Button key={index}>
+                            <Link
+                                style={{
+                                    textDecoration: "none",
+                                }}
+                                href={subPage.href}
+                            >
+                                {subPage.name}
+                            </Link>
+                        </Button>
+                    );
+                })}
+            </Box>
             <Box className="section">
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>
