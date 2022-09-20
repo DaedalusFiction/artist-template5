@@ -4,15 +4,14 @@ import { siteName } from "../../siteInfo";
 
 const Meta = () => {
     const router = useRouter();
+    const basePath = router.pathname.split("/")[1];
     return (
         <div>
             <Head>
                 {router.pathname === "/" ? (
                     <title>{siteName}</title>
                 ) : (
-                    <title>{`${siteName} - ${router.pathname
-                        .replace("/", "")
-                        .toUpperCase()}`}</title>
+                    <title>{`${siteName} - ${basePath.toUpperCase()}`}</title>
                 )}
                 <meta
                     name="keywords"

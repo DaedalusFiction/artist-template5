@@ -2,7 +2,6 @@ import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 import Meta from "../home/Meta";
-import Sidebar from "../Sidebar";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 

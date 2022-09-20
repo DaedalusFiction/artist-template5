@@ -383,9 +383,17 @@ const processSteps = [
 ];
 const pages = [
     { name: "GALLERY", href: "/gallery", subPages: galleryCategories },
-    { name: "THE PROCESS", href: "/process", subPages: [] },
+    { name: "PROCESS", href: "/process", subPages: [] },
     // { name: "SERVICES", href: "/services" },
-    { name: "ABOUT", href: "/studio", subPages: [] },
+    {
+        name: "ABOUT",
+        href: "/about",
+        subPages: [
+            { name: "The Artist", href: "/about/artist" },
+            { name: "The Studio", href: "/about/studio" },
+            { name: "The Work", href: "/about/work" },
+        ],
+    },
     { name: "CONTACT", href: "/contact", subPages: [] },
 ];
 
