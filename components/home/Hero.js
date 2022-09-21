@@ -3,8 +3,9 @@ import { Container } from "@mui/system";
 import Link from "next/link";
 import lightTheme from "../../styles/themes/lightTheme";
 import { pages, siteName, heroContent } from "../../siteInfo";
-import SocialMediaIcons from "../general/SocialMediaIcons";
 import NativeImage from "../general/NativeImage.js";
+
+const heroText = siteName;
 
 const Hero = () => {
     return (
@@ -27,13 +28,13 @@ const Hero = () => {
                     sx={{
                         textAlign: "center",
                         fontWeight: "900",
-                        fontSize: "clamp(4rem, 15vw, 20rem)",
+                        fontSize: "clamp(4rem, 12vw, 20rem)",
                         writingMode: { xs: "vertical-lr", md: "inherit" },
                         textOrientation: { xs: "upright", md: "inherit" },
                         lineHeight: { xs: "2.5em", md: ".8em" },
                     }}
                 >
-                    ARTIST PORTFOLIO
+                    {heroText}
                 </Typography>
             </Box>
             <Box
@@ -54,7 +55,7 @@ const Hero = () => {
                     sx={{
                         textAlign: "center",
                         fontWeight: "900",
-                        fontSize: "clamp(4rem, 15vw, 20rem)",
+                        fontSize: "clamp(4rem, 12vw, 20rem)",
                         color: "transparent",
                         WebkitTextStroke: `4px ${lightTheme.palette.custom.light}`,
                         transition: "300ms",
@@ -67,7 +68,7 @@ const Hero = () => {
                         lineHeight: { xs: "2.5em", md: ".8em" },
                     }}
                 >
-                    ARTIST PORTFOLIO
+                    {heroText}
                 </Typography>
             </Box>
             <Box

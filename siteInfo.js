@@ -14,7 +14,8 @@ import lightTheme from "./styles/themes/lightTheme";
 
 // 1. Meta
 
-const siteName = "ARTIST PORTFOLIO";
+// const siteName = "ARTIST PORTFOLIO";
+const siteName = "COSIMA HEWES";
 
 // 2. Layout
 
