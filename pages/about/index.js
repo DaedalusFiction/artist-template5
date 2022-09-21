@@ -4,34 +4,12 @@ import SizedImage from "../../components/general/SizedImage";
 import { leadProfile, pages, secondaryProfiles } from "../../siteInfo";
 import PageLayout from "../../components/layout/PageLayout";
 import lightTheme from "../../styles/themes/lightTheme";
+import AboutNavbar from "../../components/about/AboutNavbar";
 
 const index = () => {
     return (
         <PageLayout name="ABOUT">
-            <Box
-                sx={{
-                    margin: "2em 0",
-                    display: "flex",
-                    justifyContent: "center",
-                    gap: "1em",
-                }}
-            >
-                {/* pages[2] returns About subpages from /siteinfo */}
-                {pages[2].subPages.map((subPage, index) => {
-                    return (
-                        <Button key={index}>
-                            <Link
-                                style={{
-                                    textDecoration: "none",
-                                }}
-                                href={subPage.href}
-                            >
-                                {subPage.name}
-                            </Link>
-                        </Button>
-                    );
-                })}
-            </Box>
+            <AboutNavbar />
             <Box className="section">
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>

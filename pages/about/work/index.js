@@ -3,10 +3,12 @@ import { Container } from "@mui/system";
 import SizedImage from "../../../components/general/SizedImage";
 import { leadProfile, secondaryProfiles, workContent } from "../../../siteInfo";
 import PageLayout from "../../../components/layout/PageLayout";
+import AboutNavbar from "../../../components/about/AboutNavbar";
 
 const index = () => {
     return (
         <PageLayout name="WORK">
+            <AboutNavbar />
             <Box className="section">
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>

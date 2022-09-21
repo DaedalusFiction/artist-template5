@@ -249,51 +249,116 @@ const blockPhotoContentTwo = {
 // 4. Services
 // 5. Projects
 
-const galleryCategories = [
+const galleryStylesCategories = [
     {
-        name: "landscapes",
-        href: "/gallery/landscapes",
+        name: "Black and White",
+        href: "/gallery/styles/black%20and%20white",
         image: {
             url: "/images/placeholder.webp",
             alt: "alt gallery image text",
         },
     },
     {
+        name: "Mixed Media",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+    },
+    {
+        name: "Acrylic",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+    },
+    {
+        name: "Watercolor",
+        image: { url: "/images/placeholder.webp", alt: "alt text" },
+    },
+];
+
+const galleryCategories = [
+    {
         name: "animals",
         href: "/gallery/animals",
+        image: {
+            url: "/images/placeholder.webp",
+            alt: "alt gallery image text",
+        },
+        subCategories: [
+            {
+                name: "goats",
+                image: {
+                    url: "/images/placeholder.webp",
+                    alt: "alt gallery image text",
+                },
+            },
+            {
+                name: "horses",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "turtles",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "frogs",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+        ],
+    },
+    {
+        name: "landscapes",
+        href: "/gallery/landscapes",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
+        subCategories: [
+            {
+                name: "mountains",
+                image: {
+                    url: "/images/placeholder.webp",
+                    alt: "alt gallery image text",
+                },
+            },
+            {
+                name: "waterfalls",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "rivers",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "valleys",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+        ],
     },
     {
         name: "portraits",
         href: "/gallery/portraits",
         image: { url: "/images/placeholder.webp", alt: "alt text" },
+        subCategories: [
+            {
+                name: "men",
+                image: {
+                    url: "/images/placeholder.webp",
+                    alt: "alt gallery image text",
+                },
+            },
+            {
+                name: "women",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "children",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+            {
+                name: "elderly",
+                image: { url: "/images/placeholder.webp", alt: "alt text" },
+            },
+        ],
     },
-    {
-        name: "Black and White",
-        href: "/gallery/black%20and%20white",
-        image: { url: "/images/placeholder.webp", alt: "alt text" },
-    },
-];
-const gallerySubcategories = [
-    {
-        name: "goats",
-        image: {
-            url: "/images/placeholder.webp",
-            alt: "alt gallery image text",
-        },
-    },
-    {
-        name: "horses",
-        image: { url: "/images/placeholder.webp", alt: "alt text" },
-    },
-    {
-        name: "turtles",
-        image: { url: "/images/placeholder.webp", alt: "alt text" },
-    },
-    {
-        name: "frogs",
-        image: { url: "/images/placeholder.webp", alt: "alt text" },
-    },
+    // {
+    //     name: "Black and White",
+    //     href: "/gallery/black%20and%20white",
+    //     image: { url: "/images/placeholder.webp", alt: "alt text" },
+    // },
 ];
 
 const galleryConfig = {
@@ -433,7 +498,7 @@ export {
     navbar,
     header,
     galleryCategories,
-    gallerySubcategories,
+    galleryStylesCategories,
     galleryConfig,
     heroContent,
     homeGalleryContent,

@@ -3,8 +3,8 @@ import { Box } from "@mui/system";
 import { doc, getDoc } from "firebase/firestore";
 import Image from "next/image";
 import { useState } from "react";
-import PageLayout from "../../../components/layout/PageLayout";
-import { db } from "../../../firebase";
+import PageLayout from "../../../../components/layout/PageLayout";
+import { db } from "../../../../firebase";
 
 const Project = ({ image }) => {
     const [ratio, setRatio] = useState(1 / 1); // default to 16:9

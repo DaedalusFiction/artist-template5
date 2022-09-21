@@ -8,13 +8,16 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
-import { galleryCategories, gallerySubcategories } from "../../siteInfo";
 
 //will need to refactor this to avoid duplication
 
-const FirebaseCategorySelect = ({ formData, setFormData }) => {
-    const handleSelectedCategoriesChange = (e, index) => {
-        const selectedValue = galleryCategories[index].name;
+const FirebaseCategorySelect = ({
+    galleryCategories,
+    formData,
+    setFormData,
+}) => {
+    const handleSelectedCategoriesChange = (e, categoryIndex) => {
+        const selectedValue = galleryCategories[categoryIndex].name;
         var newSelectedCategories;
         if (e.target.checked) {
             newSelectedCategories = [...formData.categories, selectedValue];
@@ -32,8 +35,15 @@ const FirebaseCategorySelect = ({ formData, setFormData }) => {
         setFormData(newFormData);
     };
 
-    const handleSelectedSubcategoriesChange = (e, index) => {
-        const selectedValue = gallerySubcategories[index].name;
+    const handleSelectedSubCategoriesChange = (
+        e,
+        categoryIndex,
+        subCategoryIndex
+    ) => {
+        const selectedValue =
+            galleryCategories[categoryIndex].subCategories[subCategoryIndex]
+                .name;
+        console.log(selectedValue);
         var newSelectedCategories;
         if (e.target.checked) {
             newSelectedCategories = [...formData.subCategories, selectedValue];
@@ -55,17 +65,17 @@ const FirebaseCategorySelect = ({ formData, setFormData }) => {
         <Box>
             <Typography variant="h6">Select Categories: </Typography>
             <List dense>
-                {galleryCategories.map((category, index) => {
+                {galleryCategories.map((category, categoryIndex) => {
                     return (
                         <ListItem
-                            key={index}
+                            key={categoryIndex}
                             secondaryAction={
                                 <Checkbox
                                     edge="end"
                                     onChange={(e) => {
                                         handleSelectedCategoriesChange(
                                             e,
-                                            index
+                                            categoryIndex
                                         );
                                     }}
                                     value={category.name}
@@ -88,38 +98,47 @@ const FirebaseCategorySelect = ({ formData, setFormData }) => {
                 })}
             </List>
             <Typography variant="h6">Select Subcategories: </Typography>
-            <List dense>
-                {gallerySubcategories.map((category, index) => {
-                    return (
-                        <ListItem
-                            key={index}
-                            secondaryAction={
-                                <Checkbox
-                                    edge="end"
-                                    onChange={(e) => {
-                                        handleSelectedSubcategoriesChange(
-                                            e,
-                                            index
-                                        );
-                                    }}
-                                    value={category.name}
-                                    checked={formData.subCategories.includes(
-                                        category.name
-                                    )}
-                                />
-                            }
-                            disablePadding
-                        >
-                            <ListItemButton>
-                                <ListItemText
-                                    // id={labelId}
-                                    primary={category.name}
-                                />
-                            </ListItemButton>
-                        </ListItem>
-                    );
-                })}
-            </List>
+            {galleryCategories.map((category, categoryIndex) => {
+                return (
+                    <List dense key={categoryIndex}>
+                        {formData.categories.includes(category.name) &&
+                            category.subCategories.map(
+                                (subCategory, subCategoryIndex) => {
+                                    return (
+                                        <ListItem
+                                            key={subCategoryIndex}
+                                            secondaryAction={
+                                                <Checkbox
+                                                    edge="end"
+                                                    onChange={(e) => {
+                                                        handleSelectedSubCategoriesChange(
+                                                            e,
+                                                            categoryIndex,
+                                                            subCategoryIndex
+                                                        );
+                                                    }}
+                                                    value={subCategory.name}
+                                                    checked={formData.subCategories.includes(
+                                                        subCategory.name
+                                                    )}
+                                                    // inputProps={{ "aria-labelledby": labelId }}
+                                                />
+                                            }
+                                            disablePadding
+                                        >
+                                            <ListItemButton>
+                                                <ListItemText
+                                                    // id={labelId}
+                                                    primary={subCategory.name}
+                                                />
+                                            </ListItemButton>
+                                        </ListItem>
+                                    );
+                                }
+                            )}
+                    </List>
+                );
+            })}
         </Box>
     );
 };

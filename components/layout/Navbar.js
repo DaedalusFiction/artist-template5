@@ -181,7 +181,7 @@ const Navbar = () => {
                     {/* desktop view */}
                     <Box sx={{ display: { xs: "none", lg: "inherit" } }}>
                         <Grid container>
-                            <Grid item xs={4}>
+                            <Grid item xs>
                                 <Box
                                     sx={{
                                         display: "flex",
@@ -214,13 +214,14 @@ const Navbar = () => {
                                     </Typography>
                                 </Box>
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item xs={6}>
                                 <Box
                                     sx={{
                                         display: "flex",
                                         alignItems: "center",
                                         width: "100%",
-                                        justifyContent: "space-around",
+                                        height: "100%",
+                                        justifyContent: "space-between",
                                     }}
                                 >
                                     <Grid container>
@@ -268,7 +269,7 @@ const Navbar = () => {
                                     </Grid>
                                 </Box>
                             </Grid>
-                            <Grid item xs={4}>
+                            <Grid item xs>
                                 <Box
                                     sx={{
                                         display: "flex",
@@ -299,8 +300,8 @@ const Navbar = () => {
                                 <Divider />
                                 <Fade in={expanded}>
                                     <Grid container>
-                                        <Grid item xs={4}></Grid>
-                                        <Grid item xs={4}>
+                                        <Grid item xs></Grid>
+                                        <Grid item xs={6}>
                                             <Box>
                                                 <Grid container>
                                                     {pages.map(
@@ -376,7 +377,7 @@ const Navbar = () => {
                                                 </Grid>
                                             </Box>
                                         </Grid>
-                                        <Grid item xs={4}></Grid>
+                                        <Grid item xs></Grid>
                                     </Grid>
                                 </Fade>
                             </Box>
