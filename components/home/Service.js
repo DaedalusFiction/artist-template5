@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
+import lightTheme from "../../styles/themes/lightTheme";
 import SizedImage from "../general/SizedImage";
 
 const Service = ({ service, preview }) => {
@@ -31,17 +32,33 @@ const Service = ({ service, preview }) => {
                 <SizedImage height="12rem" width="100%" image={service.image} />
                 <Box sx={{ padding: "2rem 1rem" }}>
                     <Typography
-                        sx={{ textAlign: "center", fontWeight: "400" }}
+                        sx={{
+                            textAlign: "center",
+                            fontWeight: "400",
+                            color: lightTheme.palette.custom.dark,
+                        }}
                         variant="h3"
                     >
                         {service.title}
                     </Typography>
                     <br />
-                    <Typography variant="h4" sx={{ textAlign: "center" }}>
+                    <Typography
+                        variant="h4"
+                        sx={{
+                            textAlign: "center",
+                            // color: lightTheme.palette.custom.accent,
+                            color: lightTheme.palette.primary.main,
+                        }}
+                    >
                         {service.price}
                     </Typography>
                     <br />
-                    <Typography sx={{ textAlign: "center" }}>
+                    <Typography
+                        sx={{
+                            textAlign: "center",
+                            color: lightTheme.palette.custom.darkMuted,
+                        }}
+                    >
                         {service.description}
                     </Typography>
                     <br />

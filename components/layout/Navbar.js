@@ -221,7 +221,8 @@ const Navbar = () => {
                                         alignItems: "center",
                                         width: "100%",
                                         height: "100%",
-                                        justifyContent: "space-between",
+                                        justifyContent: "center",
+                                        gap: "1em",
                                     }}
                                 >
                                     <Grid container>

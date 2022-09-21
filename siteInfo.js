@@ -492,7 +492,7 @@ const processSteps = [
 const pages = [
     { name: "GALLERY", href: "/gallery", subPages: galleryCategories },
     { name: "PROCESS", href: "/process", subPages: [] },
-    // { name: "SERVICES", href: "/services" },
+    { name: "SERVICES", href: "/services", subPages: [] },
     {
         name: "ABOUT",
         href: "/about",
@@ -502,7 +502,47 @@ const pages = [
             { name: "The Work", href: "/about/work" },
         ],
     },
-    { name: "CONTACT", href: "/contact", subPages: [] },
+    {
+        name: "EVENTS",
+        href: "/events",
+        subPages: [],
+    },
+    // {
+    //     name: "EVENTS",
+    //     href: "/shows",
+    //     subPages: [
+    //         {
+    //             name: "Current",
+    //             href: "/shows/current",
+    //         },
+    //         {
+    //             name: "Upcoming",
+    //             href: "/shows/upcoming",
+    //         },
+    //         {
+    //             name: "Past",
+    //             href: "/shows/past",
+    //         },
+    //     ],
+    // },
+    // {
+    //     name: "EVENTS",
+    //     href: "/events",
+    //     subPages: [
+    //         {
+    //             name: "Current",
+    //             href: "/events/current",
+    //         },
+    //         {
+    //             name: "Upcoming",
+    //             href: "/events/upcoming",
+    //         },
+    //         {
+    //             name: "Past",
+    //             href: "/events/past",
+    //         },
+    //     ],
+    // },
 ];
 
 export {
