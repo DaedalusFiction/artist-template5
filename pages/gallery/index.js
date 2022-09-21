@@ -11,7 +11,7 @@ const Projects = () => {
                 variant="h4"
                 sx={{ textAlign: "center", marginTop: "2em" }}
             >
-                Primary Categories
+                Categories
             </Typography>
             <Grid className="section" container spacing={4}>
                 {galleryCategories.map((category, index) => {

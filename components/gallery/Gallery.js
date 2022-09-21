@@ -6,7 +6,7 @@ import GalleryImage from "./GalleryImage";
 const Gallery = ({ images }) => {
     const [columns, setColumns] = useState([[], [], []]);
     const router = useRouter();
-    const { category } = router.query;
+    const { category, subCategory } = router.query;
 
     useEffect(() => {
         function sortImages() {
@@ -36,6 +36,9 @@ const Gallery = ({ images }) => {
                                             <GalleryImage
                                                 image={image}
                                                 category={category}
+                                                subCategory={
+                                                    subCategory || "all"
+                                                }
                                             />
                                         </Box>
                                     );

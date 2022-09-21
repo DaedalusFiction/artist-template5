@@ -6,7 +6,7 @@ import SizedImage from "../general/SizedImage";
 
 const GalleryCategoryPreview = ({ category }) => {
     return (
-        <Link href={`/gallery/${category.name}`}>
+        <Link href={category.href}>
             <Box sx={{ position: "relative" }}>
                 <SizedImage
                     image={category.image}

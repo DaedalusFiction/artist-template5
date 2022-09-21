@@ -283,6 +283,7 @@ const galleryCategories = [
         subCategories: [
             {
                 name: "goats",
+                href: "/gallery/animals/goats",
                 image: {
                     url: "/images/placeholder.webp",
                     alt: "alt gallery image text",
@@ -290,14 +291,17 @@ const galleryCategories = [
             },
             {
                 name: "horses",
+                href: "/gallery/animals/horses",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
                 name: "turtles",
+                href: "/gallery/animals/turtles",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
                 name: "frogs",
+                href: "/gallery/animals/frogs",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],
@@ -309,6 +313,7 @@ const galleryCategories = [
         subCategories: [
             {
                 name: "mountains",
+                href: "/gallery/landscapes/mountains",
                 image: {
                     url: "/images/placeholder.webp",
                     alt: "alt gallery image text",
@@ -316,14 +321,17 @@ const galleryCategories = [
             },
             {
                 name: "waterfalls",
+                href: "/gallery/landscapes/waterfalls",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
                 name: "rivers",
+                href: "/gallery/landscapes/rivers",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
                 name: "valleys",
+                href: "/gallery/landscapes/valleys",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],
@@ -335,6 +343,7 @@ const galleryCategories = [
         subCategories: [
             {
                 name: "men",
+                href: "/gallery/portraits/men",
                 image: {
                     url: "/images/placeholder.webp",
                     alt: "alt gallery image text",
@@ -342,14 +351,17 @@ const galleryCategories = [
             },
             {
                 name: "women",
+                href: "/gallery/portraits/women",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
                 name: "children",
+                href: "/gallery/portraits/children",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
                 name: "elderly",
+                href: "/gallery/portraits/elderly",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],

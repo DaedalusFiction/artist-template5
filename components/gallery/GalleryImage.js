@@ -3,12 +3,12 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const GalleryImage = ({ image, category }) => {
+const GalleryImage = ({ image, category, subCategory }) => {
     const [ratio, setRatio] = useState(1 / 1); // default to 16:9
 
     return (
         <Box>
-            <Link href={`/gallery/${category}/${image.id}`}>
+            <Link href={`/gallery/${category}/${subCategory}/${image.id}`}>
                 <Box
                     className="link"
                     sx={{
