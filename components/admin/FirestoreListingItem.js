@@ -8,6 +8,7 @@ import { useState } from "react";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
 import lightTheme from "../../styles/themes/lightTheme";
 import FirebaseCategorySelect from "./FirebaseCategorySelect";
+import { galleryCategories } from "../../siteInfo";
 
 const FirestoreListingItem = ({
     image,
@@ -111,6 +112,7 @@ const FirestoreListingItem = ({
                         <FirebaseCategorySelect
                             formData={formData}
                             setFormData={setFormData}
+                            galleryCategories={galleryCategories}
                         />
                     )}
                     <Box

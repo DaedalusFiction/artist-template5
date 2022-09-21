@@ -301,8 +301,8 @@ const galleryCategories = [
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
             {
-                name: "frogs",
-                href: "/gallery/animals/frogs",
+                name: "chickens",
+                href: "/gallery/animals/chickens",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },
         ],
