@@ -10,7 +10,7 @@ const FirestoreListing = ({
     updateCounter,
     setUpdateCounter,
 }) => {
-    const [images] = useGetImages(updateCounter);
+    const [images] = useGetImages(updateCounter, folder);
     const [shownImages, setShownImages] = useState([]);
 
     const handleSearchChange = (e) => {

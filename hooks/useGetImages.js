@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 import { collection, query, orderBy, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 
-function useGetImages(updateCounter, lastVisible) {
+function useGetImages(updateCounter, folder) {
     const [images, setImages] = useState(null);
 
     useEffect(() => {
         async function getImages() {
             const q = query(
                 //change this based on Firebase file structure
-                collection(db, `gallery`),
+                collection(db, folder),
                 orderBy("dateUploaded", "desc")
             );
 
@@ -22,7 +22,7 @@ function useGetImages(updateCounter, lastVisible) {
         }
 
         getImages();
-    }, [lastVisible, updateCounter]);
+    }, [updateCounter, folder]);
     return [images];
 }
 

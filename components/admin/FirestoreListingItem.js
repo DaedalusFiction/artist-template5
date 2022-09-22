@@ -108,7 +108,7 @@ const FirestoreListingItem = ({
                                 />
                             );
                         })}
-                    {image && (
+                    {image && folder === "gallery" && (
                         <FirebaseCategorySelect
                             formData={formData}
                             setFormData={setFormData}
