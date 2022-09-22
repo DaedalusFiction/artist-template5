@@ -14,7 +14,7 @@ const HomeGallery = ({ images }) => {
                         className="flex-center"
                         sx={{ height: "100%", width: "100%", padding: "2rem" }}
                     >
-                        <NativeImage size={2000} image={images[0]} />
+                        <NativeImage maxSize={2000} image={images[0]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -22,7 +22,7 @@ const HomeGallery = ({ images }) => {
                         className="flex-center"
                         sx={{ height: "100%", width: "100%" }}
                     >
-                        <NativeImage size={800} image={images[1]} />
+                        <NativeImage maxSize={800} image={images[1]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12} md={6}>
@@ -35,8 +35,8 @@ const HomeGallery = ({ images }) => {
                             gap: "4rem",
                         }}
                     >
-                        <NativeImage size={400} image={images[2]} />
-                        <NativeImage size={400} image={images[3]} />
+                        <NativeImage maxSize={400} image={images[2]} />
+                        <NativeImage maxSize={400} image={images[3]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
@@ -44,7 +44,7 @@ const HomeGallery = ({ images }) => {
                         className="flex-center"
                         sx={{ height: "100%", width: "100%" }}
                     >
-                        <NativeImage size={1200} image={images[4]} />
+                        <NativeImage maxSize={1200} image={images[4]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
@@ -52,7 +52,7 @@ const HomeGallery = ({ images }) => {
                         className="flex-center"
                         sx={{ height: "100%", width: "100%", padding: "6rem" }}
                     >
-                        <NativeImage size={1000} image={images[5]} />
+                        <NativeImage maxSize={1000} image={images[5]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
@@ -60,7 +60,7 @@ const HomeGallery = ({ images }) => {
                         className="flex-center"
                         sx={{ height: "100%", width: "100%", padding: "2rem" }}
                     >
-                        <NativeImage size={2000} image={images[6]} />
+                        <NativeImage maxSize={2000} image={images[6]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12} lg={5}>
@@ -73,8 +73,8 @@ const HomeGallery = ({ images }) => {
                             gap: "4rem",
                         }}
                     >
-                        <NativeImage size={800} image={images[7]} />
-                        <NativeImage size={600} image={images[8]} />
+                        <NativeImage maxSize={800} image={images[7]} />
+                        <NativeImage maxSize={600} image={images[8]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12} lg={7}>
@@ -82,7 +82,7 @@ const HomeGallery = ({ images }) => {
                         className="flex-center"
                         sx={{ height: "100%", width: "100%" }}
                     >
-                        <NativeImage size={2000} image={images[9]} />
+                        <NativeImage maxSize={2000} image={images[9]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12}>
@@ -90,7 +90,7 @@ const HomeGallery = ({ images }) => {
                         className="flex-center"
                         sx={{ height: "100%", width: "100%", padding: "2rem" }}
                     >
-                        <NativeImage size={2000} image={images[10]} />
+                        <NativeImage maxSize={2000} image={images[10]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12} lg={8}>
@@ -103,7 +103,7 @@ const HomeGallery = ({ images }) => {
                             gap: "4rem",
                         }}
                     >
-                        <NativeImage size={1200} image={images[11]} />
+                        <NativeImage maxSize={1200} image={images[11]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12} lg={4}>
@@ -111,7 +111,7 @@ const HomeGallery = ({ images }) => {
                         className="flex-center"
                         sx={{ height: "100%", width: "100%" }}
                     >
-                        <NativeImage size={600} image={images[12]} />
+                        <NativeImage maxSize={600} image={images[12]} />
                     </Box>
                 </Grid>
                 <Grid item xs={12}>

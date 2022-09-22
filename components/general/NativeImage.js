@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const GalleryImage = ({ image, size }) => {
+const GalleryImage = ({ image, maxSize }) => {
     const [ratio, setRatio] = useState(1 / 1); // default to 16:9
 
     return (
@@ -13,8 +13,8 @@ const GalleryImage = ({ image, size }) => {
             placeholder="blur"
             //has to be unoptimized to work with firebase storage, apparently
             unoptimized
-            width={size}
-            height={size / ratio}
+            width={maxSize}
+            height={maxSize / ratio}
             onLoadingComplete={({ naturalWidth, naturalHeight }) =>
                 setRatio(naturalWidth / naturalHeight)
             }

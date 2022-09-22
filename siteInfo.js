@@ -14,8 +14,8 @@ import lightTheme from "./styles/themes/lightTheme";
 
 // 1. Meta
 
-// const siteName = "ARTIST PORTFOLIO";
-const siteName = "COSIMA HEWES";
+const siteName = "ARTIST PORTFOLIO";
+// const siteName = "Cosima Hewes";
 
 // 2. Layout
 
@@ -291,7 +291,7 @@ const galleryCategories = [
                 },
             },
             {
-                name: "horses",
+                name: "horses and cows",
                 href: "/gallery/animals/horses",
                 image: { url: "/images/placeholder.webp", alt: "alt text" },
             },

@@ -8,3 +8,7 @@
     src: url("/fonts/EBGaramond-VariableFont_wght.ttf") format("truetype");
     font-weight: 1 999;
 }
+
+.hi {
+    color: #f7d195;
+}

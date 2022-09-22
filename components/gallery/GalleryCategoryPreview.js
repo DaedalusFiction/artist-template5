@@ -15,20 +15,21 @@ const GalleryCategoryPreview = ({ category }) => {
                 />
                 <Box
                     sx={{
+                        padding: "0 1em",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
                         position: "absolute",
                         top: "0",
+                        left: "0",
                         height: "100%",
                         width: "100%",
                         backgroundColor: "rgba(0, 0, 0, 0.4)",
-                        left: "0",
                         opacity: { xs: "100%", lg: "0" },
                         transition: "300ms",
                         "&:hover": {
                             opacity: "100%",
                         },
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
                         cursor: "pointer",
                     }}
                 >
@@ -37,6 +38,7 @@ const GalleryCategoryPreview = ({ category }) => {
                         sx={{
                             color: "white",
                             textTransform: "uppercase",
+                            textAlign: "center",
                         }}
                     >
                         {category.name}

@@ -6,6 +6,7 @@ import { pages, siteName, heroContent } from "../../siteInfo";
 import NativeImage from "../general/NativeImage.js";
 
 const heroText = siteName;
+// const color = lightTheme.palette.primary.off;
 
 const Hero = () => {
     return (
@@ -27,7 +28,7 @@ const Hero = () => {
                     variant="h1"
                     sx={{
                         textAlign: "center",
-                        fontWeight: "900",
+                        fontWeight: "700",
                         fontSize: "clamp(4rem, 12vw, 20rem)",
                         writingMode: { xs: "vertical-lr", md: "inherit" },
                         textOrientation: { xs: "upright", md: "inherit" },
@@ -54,7 +55,7 @@ const Hero = () => {
                     variant="h1"
                     sx={{
                         textAlign: "center",
-                        fontWeight: "900",
+                        fontWeight: "700",
                         fontSize: "clamp(4rem, 12vw, 20rem)",
                         color: "transparent",
                         WebkitTextStroke: `4px ${lightTheme.palette.custom.light}`,
@@ -79,7 +80,7 @@ const Hero = () => {
                     padding: "15vh 0",
                 }}
             >
-                <NativeImage size={800} image={heroContent.image} />
+                <NativeImage maxSize={800} image={heroContent.image} />
             </Box>
         </Container>
     );
