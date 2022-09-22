@@ -7,7 +7,7 @@ import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase.js";
 import FirebaseUploadForm from "../../components/admin/FirebaseUploadForm.js";
 import FirestoreListing from "../../components/admin/FirestoreListing.js";
-import { galleryConfig } from "../../siteInfo";
+import { eventConfig, galleryConfig } from "../../siteInfo";
 import PageLayout from "../../components/layout/PageLayout.js";
 
 const Admin = () => {
@@ -42,17 +42,36 @@ const Admin = () => {
                     )}
                     {!isAdmin ? (
                         <Box sx={{ marginBottom: "3rem" }}>
-                            <Grid container spacing={2}>
+                            <Grid container spacing={8}>
                                 <Grid item xs={12} md={6}>
                                     <FirebaseUploadForm
                                         config={galleryConfig}
+                                        folder="gallery"
                                         updateCounter={updateCounter}
                                         setUpdateCounter={setUpdateCounter}
                                     />
                                 </Grid>
                                 <Grid item xs={12} md={6}>
                                     <FirestoreListing
-                                        category={galleryConfig.category}
+                                        // category={galleryConfig.category}
+                                        folder="gallery"
+                                        updateCounter={updateCounter}
+                                        setUpdateCounter={setUpdateCounter}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} md={6}>
+                                    <FirebaseUploadForm
+                                        config={eventConfig}
+                                        folder="events"
+                                        updateCounter={updateCounter}
+                                        setUpdateCounter={setUpdateCounter}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} md={6}>
+                                    <FirestoreListing
+                                        // category={galleryConfig.category}
+                                        config={eventConfig}
+                                        folder="events"
                                         updateCounter={updateCounter}
                                         setUpdateCounter={setUpdateCounter}
                                     />

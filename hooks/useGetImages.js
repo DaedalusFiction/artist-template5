@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { collection, query, orderBy, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 
-function useGetImages(category, updateCounter, lastVisible) {
+function useGetImages(updateCounter, lastVisible) {
     const [images, setImages] = useState(null);
 
     useEffect(() => {
@@ -22,7 +22,7 @@ function useGetImages(category, updateCounter, lastVisible) {
         }
 
         getImages();
-    }, [category, lastVisible, updateCounter]);
+    }, [lastVisible, updateCounter]);
     return [images];
 }
 

@@ -28,7 +28,7 @@ const Hero = () => {
                     variant="h1"
                     sx={{
                         textAlign: "center",
-                        fontWeight: "700",
+                        fontWeight: "900",
                         fontSize: "clamp(4rem, 12vw, 20rem)",
                         writingMode: { xs: "vertical-lr", md: "inherit" },
                         textOrientation: { xs: "upright", md: "inherit" },
@@ -55,7 +55,7 @@ const Hero = () => {
                     variant="h1"
                     sx={{
                         textAlign: "center",
-                        fontWeight: "700",
+                        fontWeight: "900",
                         fontSize: "clamp(4rem, 12vw, 20rem)",
                         color: "transparent",
                         WebkitTextStroke: `4px ${lightTheme.palette.custom.light}`,

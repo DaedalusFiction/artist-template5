@@ -489,6 +489,28 @@ const processSteps = [
         reverse: true,
     },
 ];
+
+const eventConfig = {
+    categories: [],
+    subCategories: [],
+    fields: [
+        { name: "Title", type: "text", value: "" },
+        { name: "Start Date", type: "date", value: "" },
+        { name: "End Date", type: "date", value: "" },
+        { name: "Venue", type: "text", value: "" },
+        { name: "Time", type: "text", value: "" },
+        {
+            name: "Description",
+            type: "text",
+            value: "",
+            multiline: true,
+            rows: 4,
+        },
+        { name: "Venue Website", type: "text", value: "" },
+    ],
+    timeUploaded: new Date(),
+};
+
 const pages = [
     { name: "GALLERY", href: "/gallery", subPages: galleryCategories },
     { name: "PROCESS", href: "/process", subPages: [] },
@@ -507,42 +529,6 @@ const pages = [
         href: "/events",
         subPages: [],
     },
-    // {
-    //     name: "EVENTS",
-    //     href: "/shows",
-    //     subPages: [
-    //         {
-    //             name: "Current",
-    //             href: "/shows/current",
-    //         },
-    //         {
-    //             name: "Upcoming",
-    //             href: "/shows/upcoming",
-    //         },
-    //         {
-    //             name: "Past",
-    //             href: "/shows/past",
-    //         },
-    //     ],
-    // },
-    // {
-    //     name: "EVENTS",
-    //     href: "/events",
-    //     subPages: [
-    //         {
-    //             name: "Current",
-    //             href: "/events/current",
-    //         },
-    //         {
-    //             name: "Upcoming",
-    //             href: "/events/upcoming",
-    //         },
-    //         {
-    //             name: "Past",
-    //             href: "/events/past",
-    //         },
-    //     ],
-    // },
 ];
 
 export {
@@ -553,6 +539,7 @@ export {
     galleryCategories,
     galleryStylesCategories,
     galleryConfig,
+    eventConfig,
     heroContent,
     homeGalleryContent,
     blockTextOne,

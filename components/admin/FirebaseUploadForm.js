@@ -7,13 +7,19 @@ import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { db, storage } from "../../firebase";
-import { galleryCategories, galleryConfig } from "../../siteInfo";
+import { galleryCategories } from "../../siteInfo";
+import lightTheme from "../../styles/themes/lightTheme";
 import ButtonWithConfirm from "../general/ButtonWithConfirm";
 import FirebaseCategorySelect from "./FirebaseCategorySelect";
 
-const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
+const FirebaseUploadForm = ({
+    config,
+    folder,
+    updateCounter,
+    setUpdateCounter,
+}) => {
     const [formData, setFormData] = useState(
-        JSON.parse(JSON.stringify(galleryConfig))
+        JSON.parse(JSON.stringify(config))
     );
     const [selectedImages, setSelectedImages] = useState([]);
     const [previews, setPreviews] = useState([]);
@@ -22,9 +28,6 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
     const fileInputRef = useRef();
 
     const handleFieldChange = (e, field, index) => {
-        if (e.target.value.length > 10) {
-            return;
-        }
         const newFieldData = {
             ...formData.fields[index],
             value: e.target.value,
@@ -86,7 +89,7 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
         //check to see if image already exists in storage
         await Promise.all(
             selectedImages.map(async (image) => {
-                const storageRef = ref(storage, `gallery`);
+                const storageRef = ref(storage, folder);
                 const task = await getDownloadURL(storageRef).then(
                     (res) => {
                         //file already exists
@@ -102,7 +105,7 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
         );
         //check to see if document with selected Title already exists
         const checkTask = await getDoc(
-            doc(db, "gallery", formData.fields[0].value)
+            doc(db, folder, formData.fields[0].value)
         );
         if (checkTask.exists()) {
             setFileError(
@@ -120,7 +123,7 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
         } else {
             setIsUploading(true);
             selectedImages.forEach(async (image) => {
-                const storageRef = ref(storage, `gallery/${image.name}`);
+                const storageRef = ref(storage, `${folder}/${image.name}`);
 
                 const uploadTask = uploadBytesResumable(storageRef, image);
                 console.log(image);
@@ -150,7 +153,7 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
                                     setDoc(
                                         doc(
                                             db,
-                                            `gallery`,
+                                            folder,
                                             formData.fields[0].value
                                         ),
                                         {
@@ -162,9 +165,7 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
                                     );
                                 }
 
-                                setFormData(
-                                    JSON.parse(JSON.stringify(galleryConfig))
-                                );
+                                setFormData(JSON.parse(JSON.stringify(config)));
                                 setPreviews([]);
                                 setSelectedImages([]);
                                 setIsUploading(false);
@@ -183,40 +184,23 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
             component="form"
             noValidate
             autoComplete="off"
-            sx={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+            sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "1rem",
+                backgroundColor: lightTheme.palette.primary.main,
+                padding: "1em",
+                borderRadius: "5px",
+            }}
         >
-            <Typography variant="h3">
-                Upload new {formData.category} item.
-            </Typography>
-            {formData.fields.map((field, index) => {
-                return (
-                    <TextField
-                        type={field.type}
-                        color="secondary"
-                        label={field.name}
-                        key={index}
-                        multiline={field.multiline}
-                        rows={field.rows}
-                        value={field.value}
-                        onChange={(e) => {
-                            handleFieldChange(e, field, index);
-                        }}
-                    />
-                );
-            })}
-            <FirebaseCategorySelect
-                formData={formData}
-                setFormData={setFormData}
-                galleryCategories={galleryCategories}
-            />
-
+            <Typography variant="h3">Upload new item to {folder}.</Typography>
             <Box>
                 <Button
                     variant="outlined"
                     color="secondary"
                     onClick={() => {
-                        console.log(fileInputRef.current.children[0].click());
-                        fileInputRef.current.click();
+                        fileInputRef.current.children[0].click();
+                        // fileInputRef.current.click();
                     }}
                 >
                     select file
@@ -267,6 +251,31 @@ const FirebaseUploadForm = ({ updateCounter, setUpdateCounter }) => {
                         );
                     })}
             </Grid>
+
+            {formData.fields.map((field, index) => {
+                return (
+                    <TextField
+                        InputLabelProps={{ shrink: true }}
+                        type={field.type}
+                        color="secondary"
+                        label={field.name}
+                        key={index}
+                        multiline={field.multiline}
+                        rows={field.rows}
+                        value={field.value}
+                        onChange={(e) => {
+                            handleFieldChange(e, field, index);
+                        }}
+                    />
+                );
+            })}
+            {folder === "gallery" && (
+                <FirebaseCategorySelect
+                    formData={formData}
+                    setFormData={setFormData}
+                    galleryCategories={galleryCategories}
+                />
+            )}
 
             <ButtonWithConfirm
                 handleClick={handleUpload}

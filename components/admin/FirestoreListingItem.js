@@ -11,8 +11,8 @@ import FirebaseCategorySelect from "./FirebaseCategorySelect";
 import { galleryCategories } from "../../siteInfo";
 
 const FirestoreListingItem = ({
+    folder,
     image,
-    category,
     updateCounter,
     setUpdateCounter,
     setShownImages,
@@ -37,7 +37,7 @@ const FirestoreListingItem = ({
         urls.forEach((url) => {
             deleteObject(ref(storage, url));
         });
-        await deleteDoc(doc(db, category, image.id));
+        await deleteDoc(doc(db, folder, image.id));
         setUpdateCounter(updateCounter + 1);
         setShownImages([]);
         setIsUpdating(false);
@@ -45,7 +45,7 @@ const FirestoreListingItem = ({
 
     const handleUpdate = async () => {
         setIsUpdating(true);
-        const docRef = doc(db, "gallery", image.id);
+        const docRef = doc(db, folder, image.id);
         await setDoc(docRef, formData).then(() => {
             setIsExpanded(false);
             setIsUpdating(false);

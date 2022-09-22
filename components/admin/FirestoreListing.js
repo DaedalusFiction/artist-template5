@@ -1,10 +1,16 @@
 import { Box, Input, Typography } from "@mui/material";
 import React, { useState } from "react";
 import useGetImages from "../../hooks/useGetImages";
+import lightTheme from "../../styles/themes/lightTheme";
 import FirestoreListingItem from "./FirestoreListingItem";
 
-const FirestoreListing = ({ category, updateCounter, setUpdateCounter }) => {
-    const [images] = useGetImages(category, updateCounter);
+const FirestoreListing = ({
+    folder,
+    config,
+    updateCounter,
+    setUpdateCounter,
+}) => {
+    const [images] = useGetImages(updateCounter);
     const [shownImages, setShownImages] = useState([]);
 
     const handleSearchChange = (e) => {
@@ -19,12 +25,19 @@ const FirestoreListing = ({ category, updateCounter, setUpdateCounter }) => {
     };
 
     return (
-        <>
+        <Box
+            sx={{
+                backgroundColor: lightTheme.palette.primary.main,
+                padding: "1em",
+                borderRadius: "5px",
+                height: "100%",
+            }}
+        >
             <Typography variant="h3">
-                Update or Delete {category} database entries
+                Update or delete item in {folder}.
             </Typography>
             <Box sx={{ display: "flex", alignItems: "end", gap: ".5em" }}>
-                <Typography>Search for item ID:</Typography>
+                <Typography>Search by image title:</Typography>
                 <Input
                     color="secondary"
                     type="text"
@@ -37,9 +50,9 @@ const FirestoreListing = ({ category, updateCounter, setUpdateCounter }) => {
                 shownImages.map((image, index) => {
                     return (
                         <FirestoreListingItem
+                            folder={folder}
                             key={index}
                             image={image}
-                            category={category}
                             updateCounter={updateCounter}
                             setUpdateCounter={setUpdateCounter}
                             setShownImages={setShownImages}
@@ -47,9 +60,9 @@ const FirestoreListing = ({ category, updateCounter, setUpdateCounter }) => {
                     );
                 })}
             {shownImages && shownImages.length === 0 && (
-                <Typography>(No items match ID)</Typography>
+                <Typography>Nothing to show.</Typography>
             )}
-        </>
+        </Box>
     );
 };
 

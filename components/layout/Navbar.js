@@ -135,9 +135,7 @@ const Navbar = () => {
                                                 key={index}
                                             >
                                                 <Typography textAlign="center">
-                                                    <Link
-                                                        href={"/" + page.href}
-                                                    >
+                                                    <Link href={page.href}>
                                                         {page.name}
                                                     </Link>
                                                 </Typography>
