@@ -529,6 +529,7 @@ const pages = [
         href: "/events",
         subPages: [],
     },
+    { name: "ADMIN", href: "/admin", subPages: [] },
 ];
 
 export {
