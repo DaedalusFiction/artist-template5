@@ -1,7 +1,7 @@
 import { Box, IconButton, TextField, Typography } from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { deleteObject, getStorage, ref } from "firebase/storage";
+import { deleteObject, ref } from "firebase/storage";
 import { db, storage } from "../../firebase";
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
 import { useState } from "react";

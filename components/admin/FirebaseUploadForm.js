@@ -203,17 +203,22 @@ const FirebaseUploadForm = ({
                         // fileInputRef.current.click();
                     }}
                 >
-                    select file
+                    select Image
                 </Button>
                 <Input
                     variant="contained"
+                    accept="image/jpeg, image/png"
                     type="file"
                     sx={{ display: "none" }}
                     ref={fileInputRef}
                     onChange={handleImagesChange}
                 >
-                    Select File
+                    Select Image
                 </Input>
+                <br />
+                <Typography variant="caption">
+                    .jpg and .png only. File size must be less than 2MB.
+                </Typography>
             </Box>
             <Grid container spacing={1}>
                 {previews.length > 0 &&
