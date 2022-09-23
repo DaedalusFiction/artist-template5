@@ -3,13 +3,29 @@ import Gallery from "../../../../components/gallery/Gallery";
 import { db } from "../../../../firebase";
 import PageLayout from "../../../../components/layout/PageLayout";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { galleryCategories } from "../../../../siteInfo";
 
 const Project = ({ images }) => {
     const router = useRouter();
+    const [title, setTitle] = useState("gallery");
+
     const { subCategory } = router.query;
 
+    useEffect(() => {
+        galleryCategories.forEach((galleryCategory) => {
+            galleryCategory.subCategories.forEach((gallerySubCategory) => {
+                if (
+                    gallerySubCategory.name.split(" ").join("") === subCategory
+                ) {
+                    setTitle(gallerySubCategory.name.toUpperCase());
+                }
+            });
+        });
+    }, [subCategory]);
+
     return (
-        <PageLayout name={subCategory}>
+        <PageLayout name={title}>
             <Gallery images={images} category="gallery" />
         </PageLayout>
     );

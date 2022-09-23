@@ -7,13 +7,23 @@ import PageLayout from "../../../components/layout/PageLayout";
 import { galleryCategories } from "../../../siteInfo";
 import { collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "../../../firebase";
+import { useEffect } from "react";
 
 const Projects = ({ images }) => {
     const router = useRouter();
+    const [title, setTitle] = useState("gallery");
     const { category } = router.query;
 
+    useEffect(() => {
+        galleryCategories.forEach((galleryCategory) => {
+            if (galleryCategory.name.split(" ").join("") === category) {
+                setTitle(galleryCategory.name.toUpperCase());
+            }
+        });
+    }, [category]);
+
     return (
-        <PageLayout name={category}>
+        <PageLayout name={title}>
             {galleryCategories.map((galleryCategory) => {
                 return (
                     galleryCategory.name === category &&
